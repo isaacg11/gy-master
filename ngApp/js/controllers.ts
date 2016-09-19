@@ -32,8 +32,8 @@
 namespace app.Controllers {
   export class HomeController {
 
-    constructor($) {
-      $('[data-toggle="popover"]').popover({html:true});
+    constructor(JQuery) {
+      JQuery('[data-toggle="popover"]').popover({html:true});
     }
   }
 
