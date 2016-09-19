@@ -27,13 +27,13 @@
   <script type="text/javascript">
 
   // dropdown menu
-  jQuery(function () {
-    jQuery('[data-toggle="popover"]').popover({html:true});
+  $(function () {
+    $('[data-toggle="popover"]').popover({html:true});
   });
 
   // typed.js
-  jQuery(function(){
-    jQuery(".element").typed({
+  $(function(){
+    $(".element").typed({
       strings: [
         "garden ^1500",
         "micro-farm ^1500",
@@ -45,14 +45,14 @@
   });
 
   // smooth scroll
-  jQuery(document).ready(function(){
-    jQuery('a[href^="#"]').on('click',function (e) {
+  $(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
 
       var target = this.hash;
       var $target = $(target);
 
-      jQuery('html, body').stop().animate({
+      $('html, body').stop().animate({
         'scrollTop': $target.offset().top
       }, 1000, 'swing', function () {
         window.location.hash = target;
