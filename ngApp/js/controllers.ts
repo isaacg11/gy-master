@@ -1,7 +1,7 @@
 // dropdown menu
 let j;
 
-j('[data-toggle="popover"]').popover({html:true});
+
 
 // typed.js
 // $(function(){
@@ -36,7 +36,7 @@ namespace app.Controllers {
   export class HomeController {
 
     constructor() {
-
+      j('[data-toggle="popover"]').popover({html:true});
     }
   }
 
