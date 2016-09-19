@@ -1,6 +1,6 @@
 'use strict';
 namespace app {
-  angular.module('app', ['ui.router', 'ngResource', 'ui.bootstrap', 'jquery'])
+  angular.module('app', ['ui.router', 'ngResource', 'ui.bootstrap', 'jQuery'])
     .config((
     $stateProvider: ng.ui.IStateProvider,
     $locationProvider: ng.ILocationProvider,

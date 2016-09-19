@@ -1,7 +1,7 @@
 'use strict';
 var app;
 (function (app) {
-    angular.module('app', ['ui.router', 'ngResource', 'ui.bootstrap', 'jquery'])
+    angular.module('app', ['ui.router', 'ngResource', 'ui.bootstrap', 'jQuery'])
         .config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
         $stateProvider.state('Home', {
             url: '/',
