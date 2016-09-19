@@ -1,0 +1,154 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0px;
+}
+
+button {
+  width: 200px;
+}
+
+h2 {
+  color: #807C80;
+}
+
+.divider {
+  margin-top: 50px;
+}
+
+.cover {
+  background-image: url('/images/cover.jpg');
+  background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+.company-name {
+  font-size: 60px;
+  padding-top: 10px;
+  padding-right: 40px;
+}
+
+.fa-caret-down {
+  font-size: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.company-slogan {
+  font-size: 60px;
+  color: #ffffff;
+  margin-top: 200px;
+}
+
+.flat-butt {
+  display: inline-block;
+  margin: 0 5px;
+  font-family: "Lato", sans-serif;
+  font-size: 16.5px;
+  padding: 12px 20px;
+  border: 2px solid #ffffff;
+  background: none;
+  color: #FFF;
+  cursor: pointer;
+  outline: 0;
+}
+.flat-butt:hover {
+  background-color: #FFF;
+  color: #666666;
+}
+
+.what {
+  background-color: #eeeeee;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  border-top: 1px solid #cccccc;
+}
+
+.steps {
+  background-color: #E0722C;
+  border-radius: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.how {
+  padding-bottom: 10px;
+}
+
+.how, p {
+  font-size: 20px;
+}
+
+.how, h1 {
+  margin-bottom: 50px;
+}
+
+.how, h3 {
+  margin-top: 50px;
+}
+
+.placeholder-img {
+  width: 75%;
+}
+
+.why {
+  background-color: #3f2c1a;
+  color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.fa-plus {
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #666666;
+}
+
+.when {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.email-input {
+  margin-top: 30px;
+}
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+
+.social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+ }
+
+ #social-fb:hover {
+     color: #3B5998;
+ }
+
+ #social-tw:hover {
+     color: #4099FF;
+ }
+
+ #social-gp:hover {
+     color: #d34836;
+ }
+
+ #social-em:hover {
+     color: #f39c12;
+ }
+
+ .copyright {
+   font-size: 20px;
+ }
+
+.footer-link:hover {
+  color: #55ACEE;
+  cursor: pointer;
+}
