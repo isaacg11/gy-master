@@ -4,7 +4,7 @@ namespace app.Controllers {
     public options;
     constructor(
     ) {
-      this.options = "<a href='#'>Services</a> <br> <a href='#'>Careers</a>";
+
     }
   }
 
