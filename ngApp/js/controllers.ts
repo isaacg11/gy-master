@@ -11,12 +11,12 @@ namespace app.Controllers {
     ) {
       this.options = $sce.trustAsHtml("<a href='#'>Services</a> <br> <a href='#'>Careers</a>");
 
-      this.$timeout(garden, 1500);
-
-      function garden() {
-        let output = <HTMLElement>document.getElementById('output');
-        output.innerHTML = 'micro-farm';
-      }
+      // this.$timeout(garden, 1500);
+      //
+      // function garden() {
+      //   let output = <HTMLElement>document.getElementById('output');
+      //   output.innerHTML = 'micro-farm';
+      // }
     }
   }
 
