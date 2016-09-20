@@ -11,6 +11,11 @@ namespace app {
       templateUrl: '/templates/home.html',
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
+    }).state('Dropdown', {
+      url: '/dropdown',
+      templateUrl: '/templates/dropdown.html',
+      controller: app.Controllers.HomeController,
+      controllerAs: 'vm'
     });
 
     $urlRouterProvider.otherwise('/');

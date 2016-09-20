@@ -34,6 +34,10 @@ h2 {
   cursor: pointer;
 }
 
+.dropdown-list {
+  background-color: #FFF;
+}
+
 .company-slogan {
   font-size: 60px;
   color: #ffffff;
