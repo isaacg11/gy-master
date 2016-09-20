@@ -61,13 +61,14 @@ h2 {
   background-color: #eeeeee;
   padding-top: 50px;
   padding-bottom: 30px;
-  border-top: 1px solid #cccccc;
 }
 
 .steps {
-  background-color: #E0722C;
-  border-radius: 100px;
-  padding-top: 25px;
+  background-color: #80c157;
+  border-radius: 50%;
+	width: 200px;
+	height: 200px;
+  padding-top: 50px;
   padding-bottom: 25px;
 }
 .how {
@@ -91,7 +92,7 @@ h2 {
 }
 
 .why {
-  background-color: #3f2c1a;
+  background-color: #5b3f25;
   color: #FFF;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -118,14 +119,30 @@ h2 {
      -o-transform: scale(1.1);
  }
 
-.social {
-  -webkit-transform: scale(0.8);
-  /* Browser Variations: */
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+ #social-fb {
+     color: #80c157;
+ }
+
+ #social-tw {
+     color: #80c157;
+ }
+
+ #social-gp {
+     color: #80c157;
+ }
+
+ #social-em {
+     color: #80c157;
  }
 
  #social-fb:hover {
