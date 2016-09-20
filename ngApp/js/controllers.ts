@@ -9,7 +9,6 @@ namespace app.Controllers {
 
     constructor(
       public $scope: ng.IScope,
-      public $event
     ) {
       this.items = [
         'The first choice!',
