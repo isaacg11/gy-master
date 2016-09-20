@@ -6,15 +6,16 @@ namespace app.Controllers {
 
     constructor(
       public $sce: ng.ISCEService,
-      public $document: ng.IDocumentService
+      public $document: ng.IDocumentService,
+      public $timeout: ng.ITimeoutService
     ) {
-      this.output = "garden";
       this.options = $sce.trustAsHtml("<a href='#'>Services</a> <br> <a href='#'>Careers</a>");
 
-      setTimeout(garden, 1500);
+      this.$timeout(garden, 1500);
 
       function garden() {
-        this.output = "micro-farm";
+        let output = <HTMLElement>document.getElementById('output');
+        output.innerHTML = 'micro-farm';
       }
     }
   }
