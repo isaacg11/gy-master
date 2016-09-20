@@ -1,7 +1,18 @@
 
 <!-- banner start -->
     <div class="cover">
-      <p class="text-right company-name">Yarden<span class="badge">BETA</span></a><i class="fa fa-caret-down" aria-hidden="true" uib-tooltip="Hello World!" tooltip-placement="bottom"></i>
+      <p class="text-right company-name">Yarden<span class="badge">BETA</span>
+        <span uib-dropdown on-toggle="toggled(open)">
+          <a href id="simple-dropdown" uib-dropdown-toggle>
+            Click me for a dropdown, yo!
+          </a>
+          <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+            <li>
+              <a href="#">Services</a>
+              <a href="#">Careers</a>
+            </li>
+          </ul>
+        </span>
       </p>
       <div class="text-center">
         <p class="company-slogan"><b>Turn your <span style="color: #ee1515">yard</span> into a <span style="color: #ee1515" class="element">garden</span></b></p>
@@ -132,13 +143,13 @@
         <div class="row">
           <div class="col-xs-7">
             <p>
-              Yarden is about focusing on a global initiative, but taking a local approach. We combine the modern technology with smart, passoinate, service. We believe through small community gardens, we can decrease hunger, reduce pesticide usage, and encourage healthy organic eating.
+              Yarden is about focusing on a global initiative, but taking a local approach. We combine modern technology with smart, passoinate service. We believe through small community gardens, we can decrease hunger, reduce pesticide usage, and encourage healthy organic eating.
             </p>
             <ul>
-              <li><p>lorem ipsum</p></li>
-              <li><p>lorem ipsum</p></li>
-              <li><p>lorem ipsum</p></li>
-              <li><p>lorem ipsum</p></li>
+              <li><p>Equal employment</p></li>
+              <li><p>Promote of tech in agriculture</p></li>
+              <li><p>Empowering local business's</p></li>
+              <li><p>Unifying communities</p></li>
             </ul>
           </div>
           <div class="col-xs-5">
