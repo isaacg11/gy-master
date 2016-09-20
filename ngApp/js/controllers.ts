@@ -4,7 +4,8 @@ namespace app.Controllers {
     public options;
 
     constructor(
-      $sce: ng.ISCEService
+      public $sce: ng.ISCEService,
+      public $document: ng.IDocumentService
     ) {
       this.options = $sce.trustAsHtml("<a href='#'>Services</a> <br> <a href='#'>Careers</a>");
     }
