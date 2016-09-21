@@ -11,9 +11,14 @@ namespace app {
       templateUrl: '/templates/home.html',
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
-    }).state('Dropdown', {
-      url: '/dropdown',
-      templateUrl: '/templates/dropdown.html',
+    }).state('App', {
+      url: '/app',
+      templateUrl: '/templates/app.html',
+      controller: app.Controllers.HomeController,
+      controllerAs: 'vm'
+    }).state('Careers', {
+      url: '/careers',
+      templateUrl: '/templates/careers.html',
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
     });
