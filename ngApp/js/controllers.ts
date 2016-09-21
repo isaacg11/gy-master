@@ -4,15 +4,12 @@ namespace app.Controllers {
     public options;
     public output;
 
-    public dropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
     constructor(
       public $sce: ng.ISCEService,
       public $document: ng.IDocumentService,
       public $timeout: ng.ITimeoutService
     ) {
-      this.options = $sce.trustAsHtml("<a href='#'>Services</a> <br> <a href='#'>Careers</a>");
+      this.options = $sce.trustAsHtml("<a ui-sref='App'>App</a> <br> <a ui-sref='Careers'>Careers</a>");
 
       this.$timeout(garden, 1500);
 
