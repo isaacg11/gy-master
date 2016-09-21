@@ -4,6 +4,9 @@ namespace app.Controllers {
     public options;
     public output;
 
+    public dropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
     constructor(
       public $sce: ng.ISCEService,
       public $document: ng.IDocumentService,
