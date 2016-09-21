@@ -9,7 +9,7 @@ namespace app.Controllers {
       public $document: ng.IDocumentService,
       public $timeout: ng.ITimeoutService
     ) {
-      this.options = $sce.trustAsHtml("<a ui-sref='App'>App</a> <br> <a ui-sref='Careers'>Careers</a>");
+      this.options = $sce.trustAsHtml("<a href='/app'>App</a> <br> <a href='/careers'>Careers</a>");
 
       this.$timeout(garden, 1500);
 
