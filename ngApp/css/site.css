@@ -34,10 +34,6 @@ h2 {
   cursor: pointer;
 }
 
-.dropdown-list {
-  background-color: #FFF;
-}
-
 .company-slogan {
   font-size: 60px;
   color: #ffffff;
@@ -84,11 +80,8 @@ h2 {
 }
 
 .how, h1 {
-  margin-bottom: 50px;
-}
-
-.how, h3 {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .placeholder-img {
@@ -172,4 +165,28 @@ h2 {
 .footer-link:hover {
   color: #55ACEE;
   cursor: pointer;
+}
+
+.services-cover {
+  background-image: url('/images/services-cover.jpg');
+  background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 55vh;
+  border-bottom: 50px solid #EEEEEE;
+}
+
+.services-slogan {
+  font-size: 80px;
+  color: #ffffff;
+}
+
+.app {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.app-img {
+  border-radius: 50%;
+  border: 10px solid #80c157;
+  padding: 10px 10px 10px 10px;
 }
