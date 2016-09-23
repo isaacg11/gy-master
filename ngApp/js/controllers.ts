@@ -19,14 +19,15 @@ namespace app.Controllers {
 
       $timeout(enter, 1000);
 
+      let fact = <HTMLElement>document.getElementById('indexOne');
+
       function enter() {
-        let fact = <HTMLElement>document.getElementById('indexOne');
         fact.className = 'animated slideInLeft';
+        fact.innerHTML = '<p>America lawns take up 3X as much space as irrigated corn.</p>';
         $timeout(leave, 4000);
       }
 
       function leave() {
-        let fact = <HTMLElement>document.getElementById('indexOne');
         fact.className = 'animated slideOutRight';
         $timeout(enter, 1200);
       }
