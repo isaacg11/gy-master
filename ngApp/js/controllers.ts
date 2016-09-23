@@ -17,19 +17,24 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
-      $timeout(enter, 1000);
+      let fact = <HTMLElement>document.getElementById('output');
+      let slides = [
+        '<p>Turf grass occupies 2% of the surface of the continental U.S, making it the single largest irrigated crop in the country</p>',
+        '<p>America lawns take up 3X as much space as irrigated corn.</p>'
+      ];
 
-      let fact = <HTMLElement>document.getElementById('indexOne');
+      for(let i = 0; i < slides.length; i ++) {
+        enter(i);
+      }
 
-      function enter() {
+      function enter(pos) {
         fact.className = 'animated slideInLeft';
-        fact.innerHTML = '<p>America lawns take up 3X as much space as irrigated corn.</p>';
+        fact.innerHTML = slides[pos];
         $timeout(leave, 4000);
       }
 
       function leave() {
         fact.className = 'animated slideOutRight';
-        $timeout(enter, 1200);
       }
     }
   }
