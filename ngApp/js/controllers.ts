@@ -20,16 +20,17 @@ namespace app.Controllers {
       $window.scrollTo(0, 0);
 
       for(let i = 0; i < 4; i++) {
-        console.log(i)
         addSlide();
       };
 
       function addSlide() {
+        console.log('hit')
+
         this.myInterval = 1000;
         this.active = 0;
         this.slides = [];
         this.slides.push({
-          image: 'images/app.png',
+          image: 'ngApp/images/app.png',
           text: ['Nice image','Awesome photograph','That is so cool','I love that'][this.slides.length % 4]
         });
       }
