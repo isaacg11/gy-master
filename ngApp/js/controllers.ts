@@ -19,15 +19,26 @@ namespace app.Controllers {
 
       $timeout(enter1, 1000);
 
-      let fact = <HTMLElement>document.getElementById('index1');
+      let fact1 = <HTMLElement>document.getElementById('index1');
+      let fact2 = <HTMLElement>document.getElementById('index2');
 
       function enter1() {
-        fact.className = 'animated slideInLeft';
+        fact1.className = 'animated slideInLeft';
         $timeout(leave1, 4000);
       }
 
       function leave1() {
-        fact.className = 'animated slideOutRight';
+        fact1.className = 'animated slideOutRight';
+        $timeout(enter2, 1200);
+      }
+
+      function enter2() {
+        fact2.className = 'animated slideInLeft';
+        $timeout(leave2, 4000);
+      }
+
+      function leave2() {
+        fact2.className = 'animated slideOutRight';
         $timeout(enter1, 1200);
       }
     }
