@@ -9,9 +9,12 @@ namespace app.Controllers {
     constructor(
       public $sce: ng.ISCEService,
       public $document: ng.IDocumentService,
-      public $timeout: ng.ITimeoutService
+      public $timeout: ng.ITimeoutService,
+      public $window: ng.IWindowService
     ) {
       this.options = $sce.trustAsHtml("<a href='/app'>App</a> <br> <a href='/careers'>Careers</a>");
+
+      $window.scrollTo(0, 0);
 
       // this.$timeout(garden, 1500);
       //
@@ -27,9 +30,12 @@ namespace app.Controllers {
     public options;
 
     constructor(
-      public $sce: ng.ISCEService
+      public $sce: ng.ISCEService,
+      public $window: ng.IWindowService
     ) {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/careers'>Careers</a>");
+
+      $window.scrollTo(0, 0);
     }
   }
 
@@ -38,9 +44,12 @@ namespace app.Controllers {
     public options;
 
     constructor(
-      public $sce: ng.ISCEService
+      public $sce: ng.ISCEService,
+      public $window: ng.IWindowService
     ) {
       this.options = $sce.trustAsHtml("<a href='/app'>App</a> <br> <a href='/'>Home</a>");
+
+      $window.scrollTo(0, 0);
     }
   }
 
