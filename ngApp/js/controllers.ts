@@ -16,19 +16,30 @@ namespace app.Controllers {
       this.options = $sce.trustAsHtml("<a href='/app'>App</a> <br> <a href='/careers'>Careers</a>");
 
       $window.scrollTo(0, 0);
+      let counter = 0;
+      let slides = [
+        "<p className='animated slideInLeft'>There's 40 million acres of lawns in the lower 48 states.</p>",
+        "<p>America lawns take up 3X as much space as irrigated corn.</p>"
+      ];
+      let fact = <HTMLElement>document.getElementById('output');
 
-      $timeout(enter, 1000);
+      for(let i = 0; i < slides.length; i++) {
+        if(i === 0) {
+          $timeout(enter, 1000);
+        } else {
+          counter = i + 1;
+          $timeout(enter, 1000);
+        }
+      }
 
       function enter() {
-        let fact = <HTMLElement>document.getElementById('indexOne');
-        fact.className = 'animated slideInLeft';
-        $timeout(leave, 4000);
+        fact.innerHTML = slides[counter];
+        $timeout(leave, 5000);
       }
 
       function leave() {
-        let fact = <HTMLElement>document.getElementById('indexOne');
         fact.className = 'animated slideOutRight';
-        $timeout(enter, 4000);
+        $timeout(enter, 2000);
       }
     }
   }
