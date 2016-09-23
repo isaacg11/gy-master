@@ -28,6 +28,7 @@ namespace app.Controllers {
       let fact7 = <HTMLElement>document.getElementById('index7');
 
       function enter1() {
+        fact7.className = 'hide';
         fact1.className = 'animated slideInLeft';
         $timeout(leave1, 4000);
       }
@@ -56,6 +57,50 @@ namespace app.Controllers {
 
       function leave3() {
         fact3.className = 'animated slideOutRight';
+        $timeout(enter4, 1200);
+      }
+
+      function enter4() {
+        fact3.className = 'hide';
+        fact4.className = 'animated slideInLeft';
+        $timeout(leave4, 4000);
+      }
+
+      function leave4() {
+        fact4.className = 'animated slideOutRight';
+        $timeout(enter5, 1200);
+      }
+
+      function enter5() {
+        fact4.className = 'hide';
+        fact5.className = 'animated slideInLeft';
+        $timeout(leave5, 4000);
+      }
+
+      function leave5() {
+        fact5.className = 'animated slideOutRight';
+        $timeout(enter6, 1200);
+      }
+
+      function enter6() {
+        fact5.className = 'hide';
+        fact6.className = 'animated slideInLeft';
+        $timeout(leave6, 4000);
+      }
+
+      function leave6() {
+        fact6.className = 'animated slideOutRight';
+        $timeout(enter7, 1200);
+      }
+
+      function enter7() {
+        fact6.className = 'hide';
+        fact7.className = 'animated slideInLeft';
+        $timeout(leave7, 4000);
+      }
+
+      function leave7() {
+        fact7.className = 'animated slideOutRight';
         $timeout(enter1, 1200);
       }
     }
