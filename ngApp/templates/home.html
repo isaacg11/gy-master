@@ -36,9 +36,9 @@
             <p>41% of pesticides include ingredients that are banned or restricted in other countries.</p>
             <p>800 million gallons of gasoline are burned while caring for lawns</p>
             <div style="height: 305px">
-              <div uib-carousel active="vm.active" interval="vm.myInterval" no-wrap="vm.noWrapSlides">
+              <div uib-carousel active="vm.active" interval="vm.myInterval" no-wrap="vm.noWrapSlides" no-transition="vm.transition">
                 <div uib-slide ng-repeat="slide in vm.slides track by slide.id" index="slide.id">
-                  <img ng-src="{{slide.image}}" style="margin:auto;">
+                  <img ng-src="{{slide.image}}">
                   <div class="carousel-caption">
                     <h4>Slide {{slide.id}}</h4>
                     <p>{{slide.text}}</p>

@@ -9,6 +9,7 @@ namespace app.Controllers {
     public myInterval;
     public active;
     public noWrapSlides;
+    public transition;
 
     constructor(
       public $sce: ng.ISCEService,
@@ -20,8 +21,9 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
-      this.myInterval = 1000;
+      this.myInterval = 5000;
       this.noWrapSlides = false;
+      this.transition = false;
       this.active = 0;
       let slides = this.slides = [];
       let currIndex = 0;
