@@ -19,7 +19,7 @@ var app;
                 function leave() {
                     var fact = document.getElementById('indexOne');
                     fact.className = 'animated slideOutRight';
-                    $timeout(enter, 1000);
+                    $timeout(enter, 4000);
                 }
             }
             return HomeController;

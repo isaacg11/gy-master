@@ -28,7 +28,7 @@ namespace app.Controllers {
       function leave() {
         let fact = <HTMLElement>document.getElementById('indexOne');
         fact.className = 'animated slideOutRight';
-        $timeout(enter, 1000);
+        $timeout(enter, 4000);
       }
     }
   }
