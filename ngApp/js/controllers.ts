@@ -6,10 +6,6 @@ namespace app.Controllers {
     public options;
     public output;
     public slides;
-    public myInterval;
-    public active;
-    public noWrapSlides;
-    public transition;
 
     constructor(
       public $sce: ng.ISCEService,
@@ -21,25 +17,13 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
-      this.myInterval = 5000;
-      this.noWrapSlides = false;
-      this.transition = false;
-      this.active = 0;
-      let slides = this.slides = [];
-      let currIndex = 0;
+      $timeout(rotate, 3000);
 
-      for(let i = 0; i < 4; i++) {
-        addSlide();
-      };
-
-      function addSlide() {
-        let newWidth = 600 + slides.length + 1;
-        slides.push({
-          image: '//unsplash.it/' + newWidth + '/300',
-          text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
-          id: currIndex++
-        });
+      function rotate() {
+        let fact = <HTMLElement>document.getElementById('indexOne');
+        fact.className = 'animated slideInLeft';
       }
+
     }
   }
 
