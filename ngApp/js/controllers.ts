@@ -8,6 +8,7 @@ namespace app.Controllers {
     public slides;
     public myInterval;
     public active;
+    public noWrapSlides;
 
     constructor(
       public $sce: ng.ISCEService,
@@ -19,19 +20,22 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
+      this.myInterval = 1000;
+      this.noWrapSlides = false;
+      this.active = 0;
+      let slides = this.slides = [];
+      let currIndex = 0;
+
       for(let i = 0; i < 4; i++) {
         addSlide();
       };
 
       function addSlide() {
-        console.log('hit')
-
-        this.myInterval = 1000;
-        this.active = 0;
-        this.slides = [];
+        let newWidth = 600 + slides.length + 1;
         this.slides.push({
-          image: 'ngApp/images/app.png',
-          text: ['Nice image','Awesome photograph','That is so cool','I love that'][this.slides.length % 4]
+          image: '//unsplash.it/' + newWidth + '/300',
+          text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+          id: currIndex++
         });
       }
     }
