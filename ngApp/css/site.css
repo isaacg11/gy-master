@@ -20,8 +20,7 @@ form {
 }
 
 .hide {
-  display: hidden !important;
-  height: 0px;
+  display: none !important;
 }
 
 /* home */

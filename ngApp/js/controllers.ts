@@ -33,6 +33,7 @@ namespace app.Controllers {
       }
 
       function enter2() {
+        fact1.className = 'hide';
         fact2.className = 'animated slideInLeft';
         $timeout(leave2, 4000);
       }
