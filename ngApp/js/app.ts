@@ -19,7 +19,7 @@ namespace app {
     }).state('Careers', {
       url: '/careers',
       templateUrl: '/templates/careers.html',
-      controller: app.Controllers.HomeController,
+      controller: app.Controllers.CareerController,
       controllerAs: 'vm'
     });
 
