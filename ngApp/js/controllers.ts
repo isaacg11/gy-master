@@ -29,18 +29,7 @@ namespace app.Controllers {
 
       function leave1() {
         fact.className = 'animated slideOutRight';
-        $timeout(enter2, 1200);
-      }
-
-      function enter2() {
-        fact.className = 'animated slideInLeft';
-        fact.innerHTML = '<p>Turf grass occupies 2% of the surface of the continental U.S, making it the single largest irrigated crop in the country</p>';
-        $timeout(leave2, 4000);
-      }
-
-      function leave2() {
-        fact.className = 'animated slideOutRight';
-        $timeout(enter2, 1200);
+        $timeout(enter1, 1200);
       }
     }
   }
