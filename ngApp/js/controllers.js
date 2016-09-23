@@ -14,7 +14,7 @@ var app;
                 function enter() {
                     var fact = document.getElementById('indexOne');
                     fact.className = 'animated slideInLeft';
-                    $timeout(leave, 1000);
+                    $timeout(leave, 4000);
                 }
                 function leave() {
                     var fact = document.getElementById('indexOne');

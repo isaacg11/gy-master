@@ -22,7 +22,7 @@ namespace app.Controllers {
       function enter() {
         let fact = <HTMLElement>document.getElementById('indexOne');
         fact.className = 'animated slideInLeft';
-        $timeout(leave, 1000);
+        $timeout(leave, 4000);
       }
 
       function leave() {
