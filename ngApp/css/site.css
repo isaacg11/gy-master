@@ -21,6 +21,7 @@ form {
 
 .hide {
   display: none;
+  height: 0px;
 }
 
 /* home */
