@@ -21,6 +21,11 @@ namespace app.Controllers {
 
       let fact1 = <HTMLElement>document.getElementById('index1');
       let fact2 = <HTMLElement>document.getElementById('index2');
+      let fact3 = <HTMLElement>document.getElementById('index3');
+      let fact4 = <HTMLElement>document.getElementById('index4');
+      let fact5 = <HTMLElement>document.getElementById('index5');
+      let fact6 = <HTMLElement>document.getElementById('index6');
+      let fact7 = <HTMLElement>document.getElementById('index7');
 
       function enter1() {
         fact1.className = 'animated slideInLeft';
@@ -40,6 +45,17 @@ namespace app.Controllers {
 
       function leave2() {
         fact2.className = 'animated slideOutRight';
+        $timeout(enter3, 1200);
+      }
+
+      function enter3() {
+        fact2.className = 'hide';
+        fact3.className = 'animated slideInLeft';
+        $timeout(leave3, 4000);
+      }
+
+      function leave3() {
+        fact3.className = 'animated slideOutRight';
         $timeout(enter1, 1200);
       }
     }
