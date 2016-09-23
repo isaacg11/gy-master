@@ -19,7 +19,7 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
-      for (var i = 0; i < 4; i++) {
+      for (let i = 0; i < 4; i++) {
         addSlide();
       };
 
@@ -27,9 +27,8 @@ namespace app.Controllers {
         this.myInterval = 1000;
         this.active = 0;
         this.slides = [];
-        let newWidth = 600 + this.slides.length + 1;
         this.slides.push({
-          image: '//unsplash.it/' + newWidth + '/300',
+          image: 'images/app.png',
           text: ['Nice image','Awesome photograph','That is so cool','I love that'][this.slides.length % 4]
         });
       }
