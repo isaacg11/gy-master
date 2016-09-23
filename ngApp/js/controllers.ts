@@ -17,13 +17,19 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
-      $timeout(rotate, 3000);
+      $timeout(enter, 1000);
 
-      function rotate() {
+      function enter() {
         let fact = <HTMLElement>document.getElementById('indexOne');
         fact.className = 'animated slideInLeft';
+        $timeout(leave, 1000);
       }
 
+      function leave() {
+        let fact = <HTMLElement>document.getElementById('indexOne');
+        fact.className = 'animated slideOutRight';
+        $timeout(enter, 1000);
+      }
     }
   }
 
