@@ -33,6 +33,19 @@ namespace app.Controllers {
     }
   }
 
+  // app
+  export class CareerController {
+    public options;
+
+    constructor(
+      public $sce: ng.ISCEService
+    ) {
+      this.options = $sce.trustAsHtml("<a href='/app'>App</a> <br> <a href='/'>Home</a>");
+    }
+  }
+
+
   angular.module('app').controller('HomeController', HomeController);
   angular.module('app').controller('AppController', AppController);
+  angular.module('app').controller('CareerController', CareerController);
 }
