@@ -38,6 +38,7 @@ form {
   background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 100vh;
+  border-bottom: 100px solid #EEEEEE;
 }
 
 .company-name {
@@ -78,7 +79,6 @@ form {
 .facts {
   padding-top: 30px;
   padding-bottom: 30px;
-  border-top: 100px solid #EEEEEE;
 }
 .what {
   background-color: #eeeeee;
