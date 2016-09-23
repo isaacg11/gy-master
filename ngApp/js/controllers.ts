@@ -32,7 +32,7 @@ namespace app.Controllers {
 
       function addSlide() {
         let newWidth = 600 + slides.length + 1;
-        this.slides.push({
+        slides.push({
           image: '//unsplash.it/' + newWidth + '/300',
           text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
           id: currIndex++
