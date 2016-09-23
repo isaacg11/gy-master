@@ -1,6 +1,6 @@
 'use strict';
 namespace app {
-  angular.module('app', ['ui.router', 'ngResource', 'ui.bootstrap', 'duScroll', 'angular-typed'])
+  angular.module('app', ['ui.router', 'ngResource', 'ui.bootstrap', 'duScroll', 'angular-typed', 'angular-carousel'])
     .config((
     $stateProvider: ng.ui.IStateProvider,
     $locationProvider: ng.ILocationProvider,

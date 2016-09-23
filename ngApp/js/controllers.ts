@@ -39,7 +39,7 @@ namespace app.Controllers {
     }
   }
 
-  // app
+  // careers
   export class CareerController {
     public options;
 
@@ -47,7 +47,7 @@ namespace app.Controllers {
       public $sce: ng.ISCEService,
       public $window: ng.IWindowService
     ) {
-      this.options = $sce.trustAsHtml("<a href='/app'>App</a> <br> <a href='/'>Home</a>");
+      this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app'>App</a>");
 
       $window.scrollTo(0, 0);
     }

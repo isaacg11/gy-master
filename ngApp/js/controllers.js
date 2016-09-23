@@ -28,7 +28,7 @@ var app;
             function CareerController($sce, $window) {
                 this.$sce = $sce;
                 this.$window = $window;
-                this.options = $sce.trustAsHtml("<a href='/app'>App</a> <br> <a href='/'>Home</a>");
+                this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app'>App</a>");
                 $window.scrollTo(0, 0);
             }
             return CareerController;
