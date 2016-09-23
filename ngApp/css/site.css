@@ -1,3 +1,5 @@
+/* global */
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   margin: 0px;
@@ -10,6 +12,14 @@ button {
 h2 {
   color: #807C80;
 }
+
+form {
+  /*background-color: #EEEEEE;*/
+  border: 1px solid #EEEEEE;
+  padding: 40px 30px 30px 30px;
+}
+
+/* home */
 
 .divider {
   margin-top: 50px;
@@ -61,6 +71,11 @@ h2 {
   color: #666666;
 }
 
+.facts {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 100px solid #EEEEEE;
+}
 .what {
   background-color: #eeeeee;
   padding-top: 50px;
@@ -75,6 +90,7 @@ h2 {
   padding-top: 50px;
   padding-bottom: 25px;
 }
+
 .how {
   padding-bottom: 10px;
 }
@@ -93,7 +109,7 @@ h2 {
 }
 
 .why {
-  background-color: #5b3f25;
+  background-color: #7f5834;
   color: #FFF;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -166,29 +182,35 @@ h2 {
    font-size: 20px;
  }
 
+ .footer-link {
+   color: #000000;
+ }
+
 .footer-link:hover {
   color: #55ACEE;
   cursor: pointer;
 }
 
+/* app */
+
 .services-cover {
   background-image: url('/images/services-cover.jpg');
   background-size: cover;
 	background-repeat: no-repeat;
-	min-height: 50vh;
+	min-height: 40vh;
 }
 
-.services-slogan {
+.sub-slogan {
   font-size: 80px;
   color: #ffffff;
 }
 
-.app {
+.banner {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.app-img{
+.banner-img{
   padding-top: 20px;
 }
 
@@ -213,48 +235,61 @@ h2 {
 .pricing-tables {
   padding: 20px;
 }
+
 .pricing-tables h1 {
   font-size: 48px;
 }
+
 .pricing-tables .plan.first {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px !important;
 }
+
 .pricing-tables .plan.last {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
 }
+
 .pricing-tables .plan.recommended {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+
 .pricing-tables .plan.recommended .head {
   /*margin-bottom: 20px;*/
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+
 .pricing-tables.attached .col-sm-4, .pricing-tables.attached .col-md-4, .pricing-tables.attached .col-sm-3, .pricing-tables.attached .col-md-3 {
   padding-left: 0;
   padding-right: 0;
 }
+
 .pricing-tables.attached .plan {
   border-radius: 0;
 }
+
 .pricing-tables.attached .plan .head {
   border-radius: 0;
 }
+
 .pricing-tables.attached .plan.last {
   border-bottom-right-radius: 4px;
 }
+
 .pricing-tables.attached .plan.last .head {
   border-top-right-radius: 4px;
 }
+
 .pricing-tables.attached .plan.first {
   border-bottom-left-radius: 4px;
 }
+
 .pricing-tables.attached .plan.first .head {
   border-top-left-radius: 4px;
 }
+
 .plan {
   box-shadow: 0 1px 1px rgba(10, 10, 10, .25) !important;
   min-height: 100px;
@@ -264,6 +299,7 @@ h2 {
   padding-bottom: 25px;
   text-align: center;
 }
+
 .plan .head {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -271,42 +307,51 @@ h2 {
   background: #80c157;
   color: #fff !important;
 }
+
 .plan .head h1, .plan .head h2, .plan .head h3 {
   padding: 0;
   margin: 0;
   font-weight: 100;
 }
+
 .plan .price {
   border-top: 1px solid #eee;
   margin: 0 auto 30px auto;
   width: 80%;
 }
+
 .plan .btn {
   padding: 10px 30px;
   text-transform: uppercase;
   font-weight: 500;
 }
+
 .plan ul {
   list-style-type: none;
   padding: 20px;
   margin-top: 2px;
 }
+
 .plan ul li {
   line-height: 22px;
   margin-bottom: 15px;
   font-size: 14px;
   font-weight: 400;
 }
+
 .plan ul li a {
   text-decoration: underline;
   color: #e6e9ed;
 }
+
 .plan ul li:last-child {
   border-bottom: none;
 }
+
 .plan ul strong {
   font-weight: 700;
 }
+
 .plan.recommended {
   margin-top: 6px;
   box-shadow: 0 0 22px rgba(10, 10, 10, 0.42);
@@ -314,18 +359,21 @@ h2 {
   z-index: 99;
   border-radius: 4px;
 }
+
 .plan.recommended .head {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   background: #4e9a06;
 }
+
 .head.value{
   background-color: #80c157;
-  /*margin-bottom: 48px;*/
 }
+
 .plan.recommended .btn {
   margin-bottom: 10px;
 }
+
 @media screen and (min-width:770px) and (max-width:990px){
   .plan .mediafix h3 {
       font-size: 55px !important;
@@ -336,4 +384,25 @@ h2 {
 
 .plan-table {
   margin-top: 25px;
+}
+
+/* careers */
+
+.careers-cover {
+  background-image: url('/images/careers-cover.png');
+  background-size: cover;
+	background-repeat: no-repeat;
+  min-height: 40vh;
+}
+
+.apply {
+  border-top: 1px solid #CCCCCC;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.requirements {
+  border-top: 1px solid #CCCCCC;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
