@@ -19,7 +19,8 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
-      for (let i = 0; i < 4; i++) {
+      for(let i = 0; i < 4; i++) {
+        console.log(i)
         addSlide();
       };
 
