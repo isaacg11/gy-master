@@ -5,6 +5,9 @@ namespace app.Controllers {
   export class HomeController {
     public options;
     public output;
+    public slides;
+    public myInterval;
+    public active;
 
     constructor(
       public $sce: ng.ISCEService,
@@ -16,12 +19,20 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
-      // this.$timeout(garden, 1500);
-      //
-      // function garden() {
-      //   let output = <HTMLElement>document.getElementById('output');
-      //   output.innerHTML = "<typed style='color:#000000'>micro-farm</typed>";
-      // }
+      for (var i = 0; i < 4; i++) {
+        addSlide();
+      };
+
+      function addSlide() {
+        this.myInterval = 1000;
+        this.active = 0;
+        this.slides = [];
+        let newWidth = 600 + this.slides.length + 1;
+        this.slides.push({
+          image: '//unsplash.it/' + newWidth + '/300',
+          text: ['Nice image','Awesome photograph','That is so cool','I love that'][this.slides.length % 4]
+        });
+      }
     }
   }
 

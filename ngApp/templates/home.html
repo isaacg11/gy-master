@@ -35,11 +35,16 @@
             <p>There are over 30 thousand tons of synthetic pestisides used on lawns annually.</p>
             <p>41% of pesticides include ingredients that are banned or restricted in other countries.</p>
             <p>800 million gallons of gasoline are burned while caring for lawns</p>
-            <ul rn-carousel rn-carousel-auto-slide>
-              <li>slide #1</li>
-              <li>slide #2</li>
-              <li>slide #3</li>
-            </ul>
+            <div style="height: 305px">
+              <div uib-carousel active="active" interval="myInterval" no-wrap="false">
+                <div uib-slide ng-repeat="s in slides" index="slide.id">
+                  <img ng-src="{{s.url}}" style="margin:auto;">
+                  <div class="carousel-caption">
+                    <p>{{s.text}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-2"></div>
         </div>
