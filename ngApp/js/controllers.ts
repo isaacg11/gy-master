@@ -4,7 +4,7 @@ namespace app.Controllers {
   // home
   export class HomeController {
     public options;
-    
+
     constructor(
       public $sce: ng.ISCEService,
       public $document: ng.IDocumentService,
@@ -27,23 +27,23 @@ namespace app.Controllers {
 
       function enter1() {
         fact7.className = 'hide';
-        fact1.className = 'animated slideInLeft';
+        fact1.className = 'animated fadeInLeft';
         $timeout(leave1, 4000);
       }
 
       function leave1() {
-        fact1.className = 'animated slideOutRight';
+        fact1.className = 'animated fadeOutRight';
         $timeout(enter2, 1200);
       }
 
       function enter2() {
         fact1.className = 'hide';
-        fact2.className = 'animated slideInLeft';
+        fact2.className = 'animated fadeInLeft';
         $timeout(leave2, 4000);
       }
 
       function leave2() {
-        fact2.className = 'animated slideOutRight';
+        fact2.className = 'animated fadeOutRight';
         $timeout(enter3, 1200);
       }
 
