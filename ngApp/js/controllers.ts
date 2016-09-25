@@ -4,9 +4,7 @@ namespace app.Controllers {
   // home
   export class HomeController {
     public options;
-    public output;
-    public slides;
-
+    
     constructor(
       public $sce: ng.ISCEService,
       public $document: ng.IDocumentService,
