@@ -49,56 +49,56 @@ namespace app.Controllers {
 
       function enter3() {
         fact2.className = 'hide';
-        fact3.className = 'animated slideInLeft';
+        fact3.className = 'animated fadeInLeft';
         $timeout(leave3, 4000);
       }
 
       function leave3() {
-        fact3.className = 'animated slideOutRight';
+        fact3.className = 'animated fadeOutRight';
         $timeout(enter4, 1200);
       }
 
       function enter4() {
         fact3.className = 'hide';
-        fact4.className = 'animated slideInLeft';
+        fact4.className = 'animated fadeInLeft';
         $timeout(leave4, 4000);
       }
 
       function leave4() {
-        fact4.className = 'animated slideOutRight';
+        fact4.className = 'animated fadeOutRight';
         $timeout(enter5, 1200);
       }
 
       function enter5() {
         fact4.className = 'hide';
-        fact5.className = 'animated slideInLeft';
+        fact5.className = 'animated fadeInLeft';
         $timeout(leave5, 4000);
       }
 
       function leave5() {
-        fact5.className = 'animated slideOutRight';
+        fact5.className = 'animated fadeOutRight';
         $timeout(enter6, 1200);
       }
 
       function enter6() {
         fact5.className = 'hide';
-        fact6.className = 'animated slideInLeft';
+        fact6.className = 'animated fadeInLeft';
         $timeout(leave6, 4000);
       }
 
       function leave6() {
-        fact6.className = 'animated slideOutRight';
+        fact6.className = 'animated fadeOutRight';
         $timeout(enter7, 1200);
       }
 
       function enter7() {
         fact6.className = 'hide';
-        fact7.className = 'animated slideInLeft';
+        fact7.className = 'animated fadeInLeft';
         $timeout(leave7, 4000);
       }
 
       function leave7() {
-        fact7.className = 'animated slideOutRight';
+        fact7.className = 'animated fadeOutRight';
         $timeout(enter1, 1200);
       }
     }
