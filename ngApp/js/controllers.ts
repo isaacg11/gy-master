@@ -159,6 +159,31 @@ namespace app.Controllers {
       }
     }
 
+    public slideLeft() {
+      counter = counter - 1;
+
+      if(counter === 1) {
+        this.step1Img.className = 'animated flipOutY';
+        this.step1Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideNext, 1000);
+      }
+      else if(counter === 2) {
+        this.step2Img.className = 'animated flipOutY';
+        this.step2Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideNext, 1000);
+      }
+      else if(counter === 3) {
+        this.step3Img.className = 'animated flipOutY';
+        this.step3Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideNext, 1000);
+      }
+      else if(counter === 4) {
+        this.step4Img.className = 'animated flipOutY';
+        this.step4Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideNext, 1000);
+      }
+    }
+
     public slideNext() {
       console.log(counter);
       if(counter === 1) {
