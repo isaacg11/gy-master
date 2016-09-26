@@ -128,7 +128,7 @@ namespace app.Controllers {
 
     public slideRight() {
       this.step1Img.className = 'animated flipOutY';
-      this.step1Txt.className = 'animated lightSpeedOut';
+      this.step1Txt.className = 'animated fadeOut';
       this.$timeout(this.slideNext, 1000);
     }
 
@@ -136,7 +136,7 @@ namespace app.Controllers {
       this.step1Img.className = 'hide';
       this.step1Txt.className = 'hide';
       this.step2Img.className = 'animated flipInY';
-      this.step2Txt.className = 'animated lightSpeedIn';
+      this.step2Txt.className = 'animated fadeIn';
     }
 
     constructor(
