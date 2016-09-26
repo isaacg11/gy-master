@@ -164,23 +164,18 @@ namespace app.Controllers {
       console.log(counter);
 
       if(counter === 1) {
-        this.step1Img.className = 'animated flipOutY';
-        this.step1Txt.className = 'animated fadeOut';
+        this.step3Img.className = 'animated flipOutY';
+        this.step3Txt.className = 'animated fadeOut';
         this.$timeout(this.slideBack, 1000);
       }
       else if(counter === 2) {
-        this.step2Img.className = 'animated flipOutY';
-        this.step2Txt.className = 'animated fadeOut';
+        this.step4Img.className = 'animated flipOutY';
+        this.step4Txt.className = 'animated fadeOut';
         this.$timeout(this.slideBack, 1000);
       }
       else if(counter === 3) {
         this.step5Img.className = 'animated flipOutY';
         this.step5Txt.className = 'animated fadeOut';
-        this.$timeout(this.slideBack, 1000);
-      }
-      else if(counter === 4) {
-        this.step4Img.className = 'animated flipOutY';
-        this.step4Txt.className = 'animated fadeOut';
         this.$timeout(this.slideBack, 1000);
       }
     }
@@ -214,7 +209,19 @@ namespace app.Controllers {
 
     public slideBack() {
       console.log(counter);
-      if(counter === 3) {
+      if(counter === 1) {
+        this.step3Img.className = 'hide';
+        this.step3Txt.className = 'hide';
+        this.step2Img.className = 'animated flipInY';
+        this.step2Txt.className = 'animated fadeIn';
+      }
+      else if(counter === 2) {
+        this.step4Img.className = 'hide';
+        this.step4Txt.className = 'hide';
+        this.step3Img.className = 'animated flipInY';
+        this.step3Txt.className = 'animated fadeIn';
+      }
+      else if(counter === 3) {
         this.step5Img.className = 'hide';
         this.step5Txt.className = 'hide';
         this.step4Img.className = 'animated flipInY';
