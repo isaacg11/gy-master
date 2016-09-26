@@ -132,8 +132,6 @@ namespace app.Controllers {
     public slideRight() {
       this.counter = this.counter + 1;
 
-      console.log(this.counter);
-
       if(this.counter === 1) {
         this.step1Img.className = 'animated flipOutY';
         this.step1Txt.className = 'animated fadeOut';
@@ -147,6 +145,7 @@ namespace app.Controllers {
     }
 
     public slideNext() {
+      console.log(this.counter);
       if(this.counter === 1) {
         this.step1Img.className = 'hide';
         this.step1Txt.className = 'hide';
