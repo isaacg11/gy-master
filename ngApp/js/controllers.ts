@@ -174,8 +174,8 @@ namespace app.Controllers {
         this.$timeout(this.slideBack, 1000);
       }
       else if(counter === 3) {
-        this.step3Img.className = 'animated flipOutY';
-        this.step3Txt.className = 'animated fadeOut';
+        this.step5Img.className = 'animated flipOutY';
+        this.step5Txt.className = 'animated fadeOut';
         this.$timeout(this.slideBack, 1000);
       }
       else if(counter === 4) {
@@ -199,8 +199,8 @@ namespace app.Controllers {
         this.step3Txt.className = 'animated fadeIn';
       }
       else if(counter === 3) {
-        this.step3Img.className = 'hide';
-        this.step3Txt.className = 'hide';
+        this.step5Img.className = 'hide';
+        this.step5Txt.className = 'hide';
         this.step4Img.className = 'animated flipInY';
         this.step4Txt.className = 'animated fadeIn';
       }
