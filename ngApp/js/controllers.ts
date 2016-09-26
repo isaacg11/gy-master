@@ -154,6 +154,8 @@ namespace app.Controllers {
         this.step2Txt.className = 'animated fadeIn';
       }
       else if(counter === 2) {
+        this.step1Img.className = 'hide';
+        this.step1Txt.className = 'hide';
         this.step2Img.className = 'hide';
         this.step2Txt.className = 'hide';
         this.step3Img.className = 'animated flipInY';
