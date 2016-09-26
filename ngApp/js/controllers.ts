@@ -134,7 +134,6 @@ namespace app.Controllers {
       counter = counter + 1;
 
       if(counter === 1) {
-        console.log('hit');
         this.step1Img.className = 'animated flipOutY';
         this.step1Txt.className = 'animated fadeOut';
         this.$timeout(this.slideNext, 1000);
@@ -174,7 +173,7 @@ namespace app.Controllers {
 
       this.step1Img = <HTMLElement>document.getElementById('step1Img');
       this.step1Txt = <HTMLElement>document.getElementById('step1Txt');
-      this.step2Img = <HTMLElement>document.getElementById('step1Img');
+      this.step2Img = <HTMLElement>document.getElementById('step2Img');
       this.step2Txt = <HTMLElement>document.getElementById('step2Txt');
       this.step3Img = <HTMLElement>document.getElementById('step3Img');
       this.step3Txt = <HTMLElement>document.getElementById('step3Txt');
