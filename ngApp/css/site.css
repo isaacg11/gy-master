@@ -442,3 +442,9 @@ form {
 .yardener-hdr {
   padding-top: 75px;
 }
+
+.get-started {
+  border-top: 1px solid #EEEEEE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
