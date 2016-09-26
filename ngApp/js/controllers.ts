@@ -1,3 +1,5 @@
+// globals
+let counter = 0;
 
 namespace app.Controllers {
 
@@ -121,7 +123,6 @@ namespace app.Controllers {
   // careers
   export class CareerController {
     public options;
-    public counter;
     public step1Img;
     public step1Txt;
     public step2Img;
@@ -130,14 +131,14 @@ namespace app.Controllers {
     public step3Txt;
 
     public slideRight() {
-      this.counter = this.counter + 1;
+      counter = counter + 1;
 
-      if(this.counter === 1) {
+      if(counter === 1) {
         this.step1Img.className = 'animated flipOutY';
         this.step1Txt.className = 'animated fadeOut';
         this.$timeout(this.slideNext, 1000);
       }
-      else if(this.counter === 2) {
+      else if(counter === 2) {
         this.step2Img.className = 'animated flipOutY';
         this.step2Txt.className = 'animated fadeOut';
         this.$timeout(this.slideNext, 1000);
@@ -145,14 +146,14 @@ namespace app.Controllers {
     }
 
     public slideNext() {
-      console.log(this.counter);
-      if(this.counter === 1) {
+      console.log(counter);
+      if(counter === 1) {
         this.step1Img.className = 'hide';
         this.step1Txt.className = 'hide';
         this.step2Img.className = 'animated flipInY';
         this.step2Txt.className = 'animated fadeIn';
       }
-      else if(this.counter === 2) {
+      else if(counter === 2) {
         this.step2Img.className = 'hide';
         this.step2Txt.className = 'hide';
         this.step3Img.className = 'animated flipInY';
@@ -169,8 +170,6 @@ namespace app.Controllers {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app'>App</a>");
 
       $window.scrollTo(0, 0);
-
-      this.counter = 0;
 
       this.step1Img = <HTMLElement>document.getElementById('step1Img');
       this.step1Txt = <HTMLElement>document.getElementById('step1Txt');
