@@ -161,9 +161,12 @@ namespace app.Controllers {
 
     public slideLeft() {
       counter = counter - 1;
-      console.log(counter);
-
-      if(counter === 1) {
+      if(counter === 0) {
+        this.step2Img.className = 'animated flipOutY';
+        this.step2Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideBack, 1000);
+      }
+      else if(counter === 1) {
         this.step3Img.className = 'animated flipOutY';
         this.step3Txt.className = 'animated fadeOut';
         this.$timeout(this.slideBack, 1000);
@@ -208,8 +211,13 @@ namespace app.Controllers {
     }
 
     public slideBack() {
-      console.log(counter);
-      if(counter === 1) {
+      if(counter === 0) {
+        this.step2Img.className = 'hide';
+        this.step2Txt.className = 'hide';
+        this.step1Img.className = 'animated flipInY';
+        this.step1Txt.className = 'animated fadeIn';
+      }
+      else if(counter === 1) {
         this.step3Img.className = 'hide';
         this.step3Txt.className = 'hide';
         this.step2Img.className = 'animated flipInY';
