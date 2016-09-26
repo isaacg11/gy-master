@@ -121,18 +121,22 @@ namespace app.Controllers {
   // careers
   export class CareerController {
     public options;
-    public step1;
-    public step2;
+    public step1Img;
+    public step1Txt;
+    public step2Img;
+    public step2Txt;
 
     public slideRight() {
-      this.step1.className = 'animated flipOutY';
+      this.step1Img.className = 'animated flipOutY';
+      this.step1Txt.className = 'animated lightSpeedOut';
       this.$timeout(this.slideNext, 1000);
     }
 
     public slideNext() {
-      this.step1.className = 'hide';
-      this.step2.className = 'animated flipInY';
-
+      this.step1Img.className = 'hide';
+      this.step1Txt.className = 'hide';
+      this.step2Img.className = 'animated flipInY';
+      this.step2Txt.className = 'animated lightSpeedIn';
     }
 
     constructor(
@@ -144,8 +148,10 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
-      this.step1 = <HTMLElement>document.getElementById('step1');
-      this.step2 = <HTMLElement>document.getElementById('step2');
+      this.step1Img = <HTMLElement>document.getElementById('step1Img');
+      this.step1Txt = <HTMLElement>document.getElementById('step1Txt');
+      this.step2Img = <HTMLElement>document.getElementById('step1Img');
+      this.step2Txt = <HTMLElement>document.getElementById('step2Txt');
     }
   }
 
