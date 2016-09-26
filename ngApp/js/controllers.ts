@@ -129,6 +129,8 @@ namespace app.Controllers {
     public step2Txt;
     public step3Img;
     public step3Txt;
+    public step4Img;
+    public step4Txt;
 
     public slideRight() {
       counter = counter + 1;
@@ -141,6 +143,11 @@ namespace app.Controllers {
       else if(counter === 2) {
         this.step2Img.className = 'animated flipOutY';
         this.step2Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideNext, 1000);
+      }
+      else if(counter === 3) {
+        this.step3Img.className = 'animated flipOutY';
+        this.step3Txt.className = 'animated fadeOut';
         this.$timeout(this.slideNext, 1000);
       }
     }
@@ -159,7 +166,12 @@ namespace app.Controllers {
         this.step3Img.className = 'animated flipInY';
         this.step3Txt.className = 'animated fadeIn';
       }
-
+      else if(counter === 3) {
+        this.step3Img.className = 'hide';
+        this.step3Txt.className = 'hide';
+        this.step4Img.className = 'animated flipInY';
+        this.step4Txt.className = 'animated fadeIn';
+      }
     }
 
     constructor(
