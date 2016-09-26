@@ -131,6 +131,8 @@ namespace app.Controllers {
     public step3Txt;
     public step4Img;
     public step4Txt;
+    public step5Img;
+    public step5Txt;
 
     public slideRight() {
       counter = counter + 1;
@@ -148,6 +150,11 @@ namespace app.Controllers {
       else if(counter === 3) {
         this.step3Img.className = 'animated flipOutY';
         this.step3Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideNext, 1000);
+      }
+      else if(counter === 4) {
+        this.step4Img.className = 'animated flipOutY';
+        this.step4Txt.className = 'animated fadeOut';
         this.$timeout(this.slideNext, 1000);
       }
     }
@@ -172,6 +179,12 @@ namespace app.Controllers {
         this.step4Img.className = 'animated flipInY';
         this.step4Txt.className = 'animated fadeIn';
       }
+      else if(counter === 4) {
+        this.step4Img.className = 'hide';
+        this.step4Txt.className = 'hide';
+        this.step5Img.className = 'animated flipInY';
+        this.step5Txt.className = 'animated fadeIn';
+      }
     }
 
     constructor(
@@ -189,7 +202,10 @@ namespace app.Controllers {
       this.step2Txt = <HTMLElement>document.getElementById('step2Txt');
       this.step3Img = <HTMLElement>document.getElementById('step3Img');
       this.step3Txt = <HTMLElement>document.getElementById('step3Txt');
-
+      this.step4Img = <HTMLElement>document.getElementById('step4Img');
+      this.step4Txt = <HTMLElement>document.getElementById('step4Txt');
+      this.step5Img = <HTMLElement>document.getElementById('step5Img');
+      this.step5Txt = <HTMLElement>document.getElementById('step5Txt');
     }
   }
 
