@@ -121,22 +121,43 @@ namespace app.Controllers {
   // careers
   export class CareerController {
     public options;
+    public counter;
     public step1Img;
     public step1Txt;
     public step2Img;
     public step2Txt;
+    public step3Img;
+    public step3Txt;
 
     public slideRight() {
-      this.step1Img.className = 'animated flipOutY';
-      this.step1Txt.className = 'animated fadeOut';
-      this.$timeout(this.slideNext, 1000);
+      this.counter = this.counter + 1;
+
+      if(this.counter === 1) {
+        this.step1Img.className = 'animated flipOutY';
+        this.step1Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideNext, 1000);
+      }
+      else if(this.counter === 2) {
+        this.step2Img.className = 'animated flipOutY';
+        this.step2Txt.className = 'animated fadeOut';
+        this.$timeout(this.slideNext, 1000);
+      }
     }
 
     public slideNext() {
-      this.step1Img.className = 'hide';
-      this.step1Txt.className = 'hide';
-      this.step2Img.className = 'animated flipInY';
-      this.step2Txt.className = 'animated fadeIn';
+      if(this.counter === 1) {
+        this.step1Img.className = 'hide';
+        this.step1Txt.className = 'hide';
+        this.step2Img.className = 'animated flipInY';
+        this.step2Txt.className = 'animated fadeIn';
+      }
+      else if(this.counter === 2) {
+        this.step2Img.className = 'hide';
+        this.step2Txt.className = 'hide';
+        this.step3Img.className = 'animated flipInY';
+        this.step3Txt.className = 'animated fadeIn';
+      }
+
     }
 
     constructor(
@@ -148,10 +169,14 @@ namespace app.Controllers {
 
       $window.scrollTo(0, 0);
 
+      this.counter = 0;
+
       this.step1Img = <HTMLElement>document.getElementById('step1Img');
       this.step1Txt = <HTMLElement>document.getElementById('step1Txt');
       this.step2Img = <HTMLElement>document.getElementById('step1Img');
       this.step2Txt = <HTMLElement>document.getElementById('step2Txt');
+      this.step3Img = <HTMLElement>document.getElementById('step3Img');
+
     }
   }
 
