@@ -165,27 +165,26 @@ namespace app.Controllers {
       if(counter === 1) {
         this.step1Img.className = 'animated flipOutY';
         this.step1Txt.className = 'animated fadeOut';
-        this.$timeout(this.slideNext, 1000);
+        this.$timeout(this.slideBack, 1000);
       }
       else if(counter === 2) {
         this.step2Img.className = 'animated flipOutY';
         this.step2Txt.className = 'animated fadeOut';
-        this.$timeout(this.slideNext, 1000);
+        this.$timeout(this.slideBack, 1000);
       }
       else if(counter === 3) {
         this.step3Img.className = 'animated flipOutY';
         this.step3Txt.className = 'animated fadeOut';
-        this.$timeout(this.slideNext, 1000);
+        this.$timeout(this.slideBack, 1000);
       }
       else if(counter === 4) {
         this.step4Img.className = 'animated flipOutY';
         this.step4Txt.className = 'animated fadeOut';
-        this.$timeout(this.slideNext, 1000);
+        this.$timeout(this.slideBack, 1000);
       }
     }
 
     public slideNext() {
-      console.log(counter);
       if(counter === 1) {
         this.step1Img.className = 'hide';
         this.step1Txt.className = 'hide';
@@ -209,6 +208,15 @@ namespace app.Controllers {
         this.step4Txt.className = 'hide';
         this.step5Img.className = 'animated flipInY';
         this.step5Txt.className = 'animated fadeIn';
+      }
+    }
+
+    public slideBack() {
+      if(counter === 3) {
+        this.step5Img.className = 'hide';
+        this.step5Txt.className = 'hide';
+        this.step4Img.className = 'animated flipInY';
+        this.step4Txt.className = 'animated fadeIn';
       }
     }
 
