@@ -199,8 +199,8 @@ namespace app.Controllers {
         this.step3Txt.className = 'animated fadeIn';
       }
       else if(counter === 3) {
-        this.step5Img.className = 'hide';
-        this.step5Txt.className = 'hide';
+        this.step3Img.className = 'hide';
+        this.step3Txt.className = 'hide';
         this.step4Img.className = 'animated flipInY';
         this.step4Txt.className = 'animated fadeIn';
       }
