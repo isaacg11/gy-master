@@ -121,14 +121,31 @@ namespace app.Controllers {
   // careers
   export class CareerController {
     public options;
+    public step1;
+    public step2;
+
+    public slideRight() {
+      this.step1.className = 'animated flipOutY';
+      this.$timeout(this.slideNext, 1000);
+    }
+
+    public slideNext() {
+      this.step1.className = 'hide';
+      this.step2.className = 'animated flipInY';
+
+    }
 
     constructor(
       public $sce: ng.ISCEService,
-      public $window: ng.IWindowService
+      public $window: ng.IWindowService,
+      public $timeout: ng.ITimeoutService
     ) {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app'>App</a>");
 
       $window.scrollTo(0, 0);
+
+      this.step1 = <HTMLElement>document.getElementById('step1');
+      this.step2 = <HTMLElement>document.getElementById('step2');
     }
   }
 

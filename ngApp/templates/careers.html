@@ -44,7 +44,7 @@
                 <div class="form-group form-group-lg">
                   <input type="text" placeholder="City/State/Zip" class="form-control"/>
                 </div>
-                <button type="submit" class="btn btn-lg btn-default">Submit</button>
+                <button type="submit" class="btn btn-lg btn-default" style="width: 100%;">Submit</button>
               </form>
             </div>
           </div>
@@ -62,14 +62,15 @@
             <img src="images/left-arrow.png" class="yardener-hdr" />
           </div>
           <div class="col-xs-3 text-right">
-            <img src="images/hand-and-phone.png" style="display: inline"/>
+            <img src="images/hand-and-phone.png" style="display: inline" id="step1" />
+            <img src="images/list.png" style="display: inline" class="hide" id="step2" />
           </div>
           <div class="col-xs-7">
             <h2 class="yardener-hdr"><b>What it's like to work with Yarden</b></h2>
             <p>Open the app and select "View Jobs"</p>
           </div>
           <div class="col-xs-1">
-            <img src="images/right-arrow.png" class="yardener-hdr"/>
+            <img src="images/right-arrow.png" class="yardener-hdr" ng-click="vm.slideRight()" />
           </div>
         </div>
       </div>
