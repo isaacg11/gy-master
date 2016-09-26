@@ -118,7 +118,7 @@ namespace app.Controllers {
     ) {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/careers'>Careers</a>");
 
-      if($stateParams) {
+      if($stateParams["id"] === true) {
         let someElement = angular.element(document.getElementById('plans'));
         $document.scrollToElement(someElement);
       } else {
