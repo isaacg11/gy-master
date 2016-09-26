@@ -112,11 +112,18 @@ namespace app.Controllers {
 
     constructor(
       public $sce: ng.ISCEService,
-      public $window: ng.IWindowService
+      public $window: ng.IWindowService,
+      public $document,
+      public $stateParams: ng.ui.IStateParamsService
     ) {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/careers'>Careers</a>");
 
-      $window.scrollTo(0, 0);
+      if($stateParams) {
+        let someElement = angular.element(document.getElementById('plans'));
+        $document.scrollToElement(someElement);
+      } else {
+        $window.scrollTo(0, 0);
+      }
     }
   }
 

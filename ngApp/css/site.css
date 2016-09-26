@@ -18,6 +18,10 @@ form {
   padding: 40px 30px 30px 30px;
 }
 
+a {
+  cursor: pointer;
+}
+
 .hide {
   display: none !important;
 }
