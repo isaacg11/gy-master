@@ -19,7 +19,7 @@ let Application = mongoose.model('Application', {
 
 // POST - new customer
 router.post('/customer', function(req, res){
-  res.send(req.body);
+  res.send('Success');
   // let newCustomer = new Customer({
   //   email: req.body.email
   // });
