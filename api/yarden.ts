@@ -1,8 +1,7 @@
 import express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-let nodemailer = require('nodemailer');
-let transporter = nodemailer.createTransport('smtps://isaac.j.grey%40gmail.com:fresno102@smtp.gmail.com');
+let request = require('request');
 
 // models
 let Customer = mongoose.model('Customer', {
@@ -27,22 +26,13 @@ router.post('/customer', function(req, res){
     if(err) {
       res.send(err);
     } else {
-      let mailOptions = {
-        from: '"Yarden" <isaac.j.grey@gmail.com>', // sender address
-        to: 'isaac.j.grey@gmail.com', // list of receivers
-        subject: 'Hello', // Subject line
-        text: 'Hello world', // plaintext body
-        html: '<b>Hello world</b>' // html body
-      };
-
-      transporter.sendMail(mailOptions, function(error, info){
-        if(error){
-          res.send(err);
-
+      request.post('https://api:pubkey-8bd3e6190d6c41cf927549e1ccc2bd68@api.mailgun.net/v3/getyarden.herokuapp.com/messages', {from: 'noreply@yarden.garden', to: "<isaac.j.grey@gmail.com>", subject: 'Hello!', text: 'heya!'}, function (error, response, body) {
+        if(error) {
+          res.send(error);
         } else {
-          res.send(info);
+          res.send(response)
         }
-      });
+      })
     }
   })
 });
