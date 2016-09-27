@@ -12,7 +12,7 @@ namespace app {
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
     }).state('App', {
-      url: '/app/:tag',
+      url: '/app',
       templateUrl: '/templates/app.html',
       controller: app.Controllers.AppController,
       controllerAs: 'vm'

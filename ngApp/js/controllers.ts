@@ -120,12 +120,12 @@ namespace app.Controllers {
 
       console.log($stateParams);
 
-      if($stateParams["tag"] === 'plans') {
-        let el = angular.element(document.getElementById('plans'));
-        $document.scrollToElement(el);
-      } else {
-        $window.scrollTo(0, 0);
-      }
+      // if($stateParams["tag"] === 'plans') {
+      //   let el = angular.element(document.getElementById('plans'));
+      //   $document.scrollToElement(el);
+      // } else {
+      //   $window.scrollTo(0, 0);
+      // }
     }
   }
 
