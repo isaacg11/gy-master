@@ -225,7 +225,7 @@
               <div class="input-group input-group-lg">
                 <input
                   ng-model="vm.email"
-                  type="text"
+                  type="email"
                   class="form-control"
                   placeholder="Email Address.." />
                 <span class="input-group-btn">
@@ -265,3 +265,5 @@
       <hr>
     </div>
     <!-- footer end -->
+
+    <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>

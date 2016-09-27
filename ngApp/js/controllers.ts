@@ -9,9 +9,20 @@ namespace app.Controllers {
     public email;
 
     public submit() {
-      this.yardenService.save(this.email).then(() => {
-        alert('complete!');
-      })
+      // this.yardenService.save(this.email).then(() => {
+        this.$scope.alerts = [
+          { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
+          { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
+        ];
+
+        this.$scope.addAlert = function() {
+          this.$scope.alerts.push({msg: 'Another alert!'});
+        };
+
+        this.$scope.closeAlert = function(index) {
+          this.$scope.alerts.splice(index, 1);
+        };
+      // })
     }
 
     constructor(
@@ -20,7 +31,8 @@ namespace app.Controllers {
       public $timeout: ng.ITimeoutService,
       public $window: ng.IWindowService,
       public $stateParams: ng.ui.IStateParamsService,
-      private yardenService: app.Services.YardenService
+      private yardenService: app.Services.YardenService,
+      public $scope
     ) {
       this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers/info'>Careers</a>");
 
@@ -131,8 +143,6 @@ namespace app.Controllers {
       public $stateParams: ng.ui.IStateParamsService
     ) {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/careers/info'>Careers</a>");
-
-      console.log($stateParams);
 
       if($stateParams["tag"] === 'plans') {
         let el = angular.element(document.getElementById('plans'));
