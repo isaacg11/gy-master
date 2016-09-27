@@ -11,7 +11,7 @@ namespace app.Controllers {
 
     public submit() {
       this.yardenService.save(this.email).then(() => {
-        this.toastr.success('Success!', 'You have been added to the list');
+        this.toastr.success('Success! You have been added to the list');
         this.email = "";
       })
     };
