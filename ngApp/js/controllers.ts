@@ -13,7 +13,7 @@ namespace app.Controllers {
       public $timeout: ng.ITimeoutService,
       public $window: ng.IWindowService
     ) {
-      this.options = $sce.trustAsHtml("<a href='/app'>App</a> <br> <a href='/careers'>Careers</a>");
+      this.options = $sce.trustAsHtml("<a href='/app/false'>App</a> <br> <a href='/careers'>Careers</a>");
 
       $window.scrollTo(0, 0);
 
