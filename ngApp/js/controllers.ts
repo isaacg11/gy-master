@@ -11,7 +11,13 @@ namespace app.Controllers {
 
     public submit() {
       // this.yardenService.save(this.email).then(() => {
-    }
+    };
+
+    public close() {
+      let div = <HTMLElement>document.getElementById('success');
+      div.style.opacity = "0";
+      setTimeout(function(){ div.style.display = "none"; }, 600);
+    };
 
     constructor(
       public $sce: ng.ISCEService,
