@@ -13,7 +13,7 @@ namespace app.Controllers {
       public $timeout: ng.ITimeoutService,
       public $window: ng.IWindowService
     ) {
-      this.options = $sce.trustAsHtml("<a href='/app/false'>App</a> <br> <a href='/careers'>Careers</a>");
+      this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers'>Careers</a>");
 
       $window.scrollTo(0, 0);
 
@@ -120,7 +120,7 @@ namespace app.Controllers {
 
       console.log($stateParams);
 
-      if($stateParams["id"] === 'true') {
+      if($stateParams["tag"] === 'plans') {
         let el = angular.element(document.getElementById('plans'));
         $document.scrollToElement(el);
       } else {
