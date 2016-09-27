@@ -1,7 +1,7 @@
 import express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-let sg = require('sendgrid')('NytJNtYqSRSBM14iXadnfw');
+let sg = require('sendgrid')('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');
 let helper = require('sendgrid').mail;
 let from_email = new helper.Email('noreply@yarden.garden');
 let to_email = new helper.Email('isaac.j.grey@gmail.com');
