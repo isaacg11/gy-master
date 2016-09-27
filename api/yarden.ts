@@ -19,36 +19,35 @@ let Application = mongoose.model('Application', {
 
 // POST - new customer
 router.post('/customer', function(req, res){
-  res.send(req.body);
-  // let newCustomer = new Customer({
-  //   email: req.params["email"]
-  // });
-  //
-  // newCustomer.save((err, customer) => {
-  //   if(err) {
-  //     res.send(err);
-  //   } else {
-  //     let from_email = new helper.Email('noreply@yarden.garden');
-  //     let to_email = new helper.Email(req.params["email"]);
-  //     let subject = "Registration Confirmed For Yarden (BETA)!";
-  //     let content = new helper.Content('text/plain', "Ahoy! You've been added to the waiting list for Yarden, we will notify you upon it's release. Cheers!");
-  //     let mail = new helper.Mail(from_email, subject, to_email, content);
-  //
-  //     let request = sg.emptyRequest({
-  //       method: 'POST',
-  //       path: '/v3/mail/send',
-  //       body: mail.toJSON(),
-  //     });
-  //
-  //     sg.API(request, function(error, response) {
-  //       if(error) {
-  //         res.send(error);
-  //       } else {
-  //         res.send(response);
-  //       }
-  //     });
-  //   }
-  // })
+  let newCustomer = new Customer({
+    email: req.body.email
+  });
+
+  newCustomer.save((err, customer) => {
+    if(err) {
+      res.send(err);
+    } else {
+      let from_email = new helper.Email('noreply@yarden.garden');
+      let to_email = new helper.Email(req.body.email);
+      let subject = "Registration Confirmed For Yarden (BETA)!";
+      let content = new helper.Content('text/plain', "Ahoy! You've been added to the waiting list for Yarden, we will notify you upon it's release. Cheers!");
+      let mail = new helper.Mail(from_email, subject, to_email, content);
+
+      let request = sg.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: mail.toJSON(),
+      });
+
+      sg.API(request, function(error, response) {
+        if(error) {
+          res.send(error);
+        } else {
+          res.send(response);
+        }
+      });
+    }
+  })
 });
 
 // POST - new application
