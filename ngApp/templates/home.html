@@ -266,5 +266,5 @@
     </div>
     <!-- footer end -->
 
-    <div uib-alert ng-repeat="alert in vm.alerts" ng-class="'alert-' + (alert.type || 'warning')" close="vm.closeAlert($index)">{{alert.msg}}</div>
+    <div uib-alert ng-repeat="alert in vm.alerts" ng-class="'alert-' + ({{alert.type}} || 'warning')" close="vm.closeAlert($index)">{{alert.msg}}</div>
     <button type="button" class='btn btn-default' ng-click="addAlert()">Add Alert</button>
