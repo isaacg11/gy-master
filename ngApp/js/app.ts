@@ -12,12 +12,12 @@ namespace app {
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
     }).state('App', {
-      url: '/app',
+      url: '/app/:id',
       templateUrl: '/templates/app.html',
       controller: app.Controllers.AppController,
       controllerAs: 'vm'
     }).state('Careers', {
-      url: '/careers/:id',
+      url: '/careers',
       templateUrl: '/templates/careers.html',
       controller: app.Controllers.CareerController,
       controllerAs: 'vm'
