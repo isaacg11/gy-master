@@ -17,7 +17,7 @@ namespace app {
       controller: app.Controllers.AppController,
       controllerAs: 'vm'
     }).state('Careers', {
-      url: '/careers',
+      url: '/careers/:tag',
       templateUrl: '/templates/careers.html',
       controller: app.Controllers.CareerController,
       controllerAs: 'vm'
