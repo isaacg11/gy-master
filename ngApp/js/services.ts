@@ -13,7 +13,7 @@ namespace app.Services {
     }
 
     constructor(
-      private $resource
+      private $resource: ng.resource.IResourceService
     ) {
       this.CustomerResource = $resource('/api/customer/:email');
       this.ApplicationResource = $resource('/api/application');
