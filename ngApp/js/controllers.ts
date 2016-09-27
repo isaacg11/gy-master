@@ -122,7 +122,7 @@ namespace app.Controllers {
       public $document,
       public $stateParams: ng.ui.IStateParamsService
     ) {
-      this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/careers'>Careers</a>");
+      this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/careers/info'>Careers</a>");
 
       console.log($stateParams);
 
@@ -257,7 +257,7 @@ namespace app.Controllers {
       public $window: ng.IWindowService,
       public $timeout: ng.ITimeoutService
     ) {
-      this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app'>App</a>");
+      this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app/v1'>App</a>");
 
       $window.scrollTo(0, 0);
 
