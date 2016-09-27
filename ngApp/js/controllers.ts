@@ -14,7 +14,7 @@ namespace app.Controllers {
       public $window: ng.IWindowService,
       public $stateParams: ng.ui.IStateParamsService
     ) {
-      this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers'>Careers</a>");
+      this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers/info'>Careers</a>");
 
       if($stateParams["tag"] === 'signup') {
         let el = angular.element(document.getElementById('signup'));
