@@ -2,7 +2,7 @@ import express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-router.post('/api/customer', function(req, res){
+router.post('/customer', function(req, res){
   console.log(req.body);
   res.send({message: 'success'});
 });
