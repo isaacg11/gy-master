@@ -20,7 +20,7 @@ let Application = mongoose.model('Application', {
 // POST - new customer
 router.post('/customer/:email', function(req, res){
   let newCustomer = new Customer({
-    email: req.body.email
+    email: req.params["email"]
   });
 
   newCustomer.save((err, customer) => {
