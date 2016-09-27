@@ -10,6 +10,7 @@ namespace app.Controllers {
     public alerts;
 
     public submit() {
+      this.toastr.success('Hello world!', 'Toastr fun!');
       // this.yardenService.save(this.email).then(() => {
     };
 
@@ -20,6 +21,7 @@ namespace app.Controllers {
       public $window: ng.IWindowService,
       public $stateParams: ng.ui.IStateParamsService,
       private yardenService: app.Services.YardenService,
+      public toastr
     ) {
       this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers/info'>Careers</a>");
 
