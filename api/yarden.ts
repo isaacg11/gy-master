@@ -24,29 +24,30 @@ let Application = mongoose.model('Application', {
 
 // POST - new customer
 router.post('/customer', function(req, res){
-  let newCustomer = new Customer({
-    email: req.body.email
+  let request = sg.emptyRequest({
+    method: 'POST',
+    path: '/v3/mail/send',
+    body: mail.toJSON(),
   });
 
-  newCustomer.save((err, customer) => {
-    if(err) {
-      res.send(err);
+  sg.API(request, function(error, response) {
+    if(error) {
+      res.send(error);
     } else {
-      let request = sg.emptyRequest({
-        method: 'POST',
-        path: '/v3/mail/send',
-        body: mail.toJSON(),
-      });
-
-      sg.API(request, function(error, response) {
-        if(error) {
-          res.send(err);
-        } else {
-          res.send(response);
-        }
-      });
+      res.send(response);
     }
-  })
+  });
+  // let newCustomer = new Customer({
+  //   email: req.body.email
+  // });
+  //
+  // newCustomer.save((err, customer) => {
+  //   if(err) {
+  //     res.send(err);
+  //   } else {
+  //
+  //   }
+  // })
 });
 
 // POST - new application
