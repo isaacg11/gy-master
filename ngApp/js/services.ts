@@ -14,7 +14,7 @@ namespace app.Services {
     constructor(
       private $resource
     ) {
-      this.CustomerResource = $resource('/api/customer');
+      this.CustomerResource = $resource('/api/customer/:email');
       this.ApplicationResource = $resource('/api/application');
     }
   }
