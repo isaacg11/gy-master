@@ -10,8 +10,10 @@ namespace app.Controllers {
     public alerts;
 
     public submit() {
-      this.toastr.success('Hello world!', 'Toastr fun!');
-      // this.yardenService.save(this.email).then(() => {
+      this.yardenService.save(this.email).then(() => {
+        this.toastr.success('Success!', 'You have been added to the list');
+        this.email = "";
+      })
     };
 
     constructor(
