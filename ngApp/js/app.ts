@@ -7,7 +7,7 @@ namespace app {
     $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
     $stateProvider.state('Home', {
-      url: '/',
+      url: '/:tag',
       templateUrl: '/templates/home.html',
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
