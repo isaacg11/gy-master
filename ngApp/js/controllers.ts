@@ -6,13 +6,21 @@ namespace app.Controllers {
   // home
   export class HomeController {
     public options;
+    public email;
+
+    public submit() {
+      this.yardenService.save(this.email).then(() => {
+        alert('complete!');
+      })
+    }
 
     constructor(
       public $sce: ng.ISCEService,
       public $document,
       public $timeout: ng.ITimeoutService,
       public $window: ng.IWindowService,
-      public $stateParams: ng.ui.IStateParamsService
+      public $stateParams: ng.ui.IStateParamsService,
+      private yardenService: app.Services.YardenService
     ) {
       this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers/info'>Careers</a>");
 
