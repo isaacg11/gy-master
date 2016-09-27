@@ -9,13 +9,19 @@ namespace app.Controllers {
 
     constructor(
       public $sce: ng.ISCEService,
-      public $document: ng.IDocumentService,
+      public $document,
       public $timeout: ng.ITimeoutService,
-      public $window: ng.IWindowService
+      public $window: ng.IWindowService,
+      public $stateParams: ng.ui.IStateParamsService
     ) {
       this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers'>Careers</a>");
 
-      $window.scrollTo(0, 0);
+      if($stateParams["tag"] === 'signup') {
+        let el = angular.element(document.getElementById('signup'));
+        $document.scrollToElement(el);
+      } else {
+        $window.scrollTo(0, 0);
+      }
 
       $timeout(enter1, 1000);
 
