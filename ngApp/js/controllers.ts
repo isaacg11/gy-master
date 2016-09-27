@@ -7,7 +7,6 @@ namespace app.Controllers {
   export class HomeController {
     public options;
     public email;
-    public alerts;
 
     public submit() {
       this.yardenService.save(this.email).then(() => {
