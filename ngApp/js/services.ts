@@ -4,7 +4,7 @@ namespace app.Services {
     public YardenerResource;
 
     public save(email) {
-      return this.CustomerResource.save({email: email}).$promise;
+      // return this.CustomerResource.save({email: email}).$promise;
     }
 
     constructor(
