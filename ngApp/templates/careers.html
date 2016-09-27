@@ -67,7 +67,7 @@
                 </div>
                 <button
                   ng-click="vm.submit()"
-                  ng-disabled="!vm.application.name && ! vm.application.email"
+                  ng-disabled="!vm.application.name || !vm.application.email"
                   type="submit"
                   class="btn btn-lg btn-default"
                   style="width: 100%;">Submit
