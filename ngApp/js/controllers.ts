@@ -21,7 +21,7 @@ namespace app.Controllers {
       public $window: ng.IWindowService,
       public $stateParams: ng.ui.IStateParamsService,
       private yardenService: app.Services.YardenService,
-      public toaster
+      private toaster
     ) {
       this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers/info'>Careers</a>");
 
