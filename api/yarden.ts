@@ -2,7 +2,7 @@ import express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 let nodemailer = require('nodemailer');
-let transporter = nodemailer.createTransport('smtps://isaac.j.grey@gmail.com:fresno102@smtp.gmail.com');
+let transporter = nodemailer.createTransport('smtps://isaac.j.grey%40gmail.com:fresno102@smtp.gmail.com');
 
 // models
 let Customer = mongoose.model('Customer', {
@@ -28,8 +28,8 @@ router.post('/customer', function(req, res){
       res.send(err);
     } else {
       let mailOptions = {
-        from: '"Yarden" <noreply@yarden.garden>', // sender address
-        to: req.body.email, // list of receivers
+        from: '"Yarden" <isaac.j.grey@gmail.com>', // sender address
+        to: 'isaac.j.grey@gmail.com', // list of receivers
         subject: 'Hello', // Subject line
         text: 'Hello world', // plaintext body
         html: '<b>Hello world</b>' // html body
