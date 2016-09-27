@@ -1,6 +1,8 @@
 import express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
+let nodemailer = require('nodemailer');
+let transporter = nodemailer.createTransport('smtps://isaac.j.grey@gmail.com:fresno102@smtp.gmail.com');
 
 // models
 let Customer = mongoose.model('Customer', {
@@ -25,7 +27,22 @@ router.post('/customer', function(req, res){
     if(err) {
       res.send(err);
     } else {
-      res.send(customer);
+      let mailOptions = {
+        from: '"Yarden" <noreply@yarden.garden>', // sender address
+        to: req.body.email, // list of receivers
+        subject: 'Hello', // Subject line
+        text: 'Hello world', // plaintext body
+        html: '<b>Hello world</b>' // html body
+      };
+
+      transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+          res.send(err);
+
+        } else {
+          res.send(info);
+        }
+      });
     }
   })
 });
