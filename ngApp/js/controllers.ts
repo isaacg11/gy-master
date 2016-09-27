@@ -13,14 +13,6 @@ namespace app.Controllers {
       // this.yardenService.save(this.email).then(() => {
     }
 
-    public addAlert() {
-      this.alerts.push({msg: 'Another alert!'});
-    }
-
-    public closeAlert(index) {
-      this.alerts.splice(index, 1);
-    }
-
     constructor(
       public $sce: ng.ISCEService,
       public $document,
@@ -28,14 +20,8 @@ namespace app.Controllers {
       public $window: ng.IWindowService,
       public $stateParams: ng.ui.IStateParamsService,
       private yardenService: app.Services.YardenService,
-      public $scope
     ) {
       this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers/info'>Careers</a>");
-
-      this.alerts = [
-        { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
-        { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
-      ];
 
       if($stateParams["tag"] === 'signup') {
         let el = angular.element(document.getElementById('signup'));
