@@ -31,21 +31,46 @@
               <form>
                 <h3>Apply Now!</h3>
                 <div class="form-group form-group-lg">
-                  <input type="text" placeholder="Full Name" class="form-control"/>
+                  <input
+                    ng-model="vm.application.name"
+                    type="text"
+                    placeholder="Full Name"
+                    class="form-control" />
                 </div>
                 <div class="form-group form-group-lg">
-                  <input type="text" placeholder="Email" class="form-control"/>
+                  <input
+                    ng-model="vm.application.email"
+                    type="text"
+                    placeholder="Email"
+                    class="form-control" />
                 </div>
                 <div class="form-group form-group-lg">
-                  <input type="text" placeholder="Phone" class="form-control"/>
+                  <input
+                    ng-model="vm.application.phone"
+                    type="text"
+                    placeholder="Phone"
+                    class="form-control" />
                 </div>
                 <div class="form-group form-group-lg">
-                  <input type="text" placeholder="Street Address" class="form-control"/>
+                  <input
+                    ng-model="vm.application.address"
+                    type="text"
+                    placeholder="Street Address"
+                    class="form-control" />
                 </div>
                 <div class="form-group form-group-lg">
-                  <input type="text" placeholder="City/State/Zip" class="form-control"/>
+                  <input
+                    ng-model="vm.application.cityStateZip"
+                    type="text"
+                    placeholder="City/State/Zip"
+                    class="form-control" />
                 </div>
-                <button type="submit" class="btn btn-lg btn-default" style="width: 100%;">Submit</button>
+                <button
+                  ng-click="vm.submit()"
+                  type="submit"
+                  class="btn btn-lg btn-default"
+                  style="width: 100%;">Submit
+                </button>
               </form>
             </div>
           </div>

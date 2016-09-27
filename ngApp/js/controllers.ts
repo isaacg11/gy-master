@@ -9,7 +9,7 @@ namespace app.Controllers {
     public email;
 
     public submit() {
-      this.yardenService.save(this.email).then(() => {
+      this.yardenService.saveCustomer(this.email).then(() => {
         this.toastr.success('Success! You have been added to the list');
         this.email = "";
       })
@@ -146,6 +146,7 @@ namespace app.Controllers {
   // careers
   export class CareerController {
     public options;
+    public application;
     public step1Img;
     public step1Txt;
     public step2Img;
@@ -156,6 +157,17 @@ namespace app.Controllers {
     public step4Txt;
     public step5Img;
     public step5Txt;
+
+    public submit() {
+      this.yardenService.saveApplication(this.application).then(() => {
+        this.toastr.success('Success! Your application has been submitted');
+        this.application.name = "";
+        this.application.email = "";
+        this.application.phone = "";
+        this.application.address = "";
+        this.application.cityStateZip = "";
+      })
+    }
 
     public slideRight() {
       counter = counter + 1;
@@ -263,7 +275,9 @@ namespace app.Controllers {
     constructor(
       public $sce: ng.ISCEService,
       public $window: ng.IWindowService,
-      public $timeout: ng.ITimeoutService
+      public $timeout: ng.ITimeoutService,
+      private yardenService: app.Services.YardenService,
+      public toastr
     ) {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app/v1'>App</a>");
 
