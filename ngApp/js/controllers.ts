@@ -9,7 +9,8 @@ namespace app.Controllers {
     public email;
 
     public submit() {
-      this.yardenService.saveCustomer(this.email).then(() => {
+      let info = {email: this.email};
+      this.yardenService.saveCustomer(info).then(() => {
         this.toastr.success('Success! You have been added to the list');
         this.email = "";
       })

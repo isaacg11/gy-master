@@ -3,9 +3,8 @@ namespace app.Services {
     public CustomerResource;
     public ApplicationResource;
 
-    public saveCustomer(address) {
-      console.log(address);
-      return this.CustomerResource.save({email: address}).$promise;
+    public saveCustomer(email) {
+      return this.CustomerResource.save(email).$promise;
     }
 
     public saveApplication(application) {
@@ -15,7 +14,7 @@ namespace app.Services {
     constructor(
       private $resource: ng.resource.IResourceService
     ) {
-      this.CustomerResource = $resource('/api/customer/:email');
+      this.CustomerResource = $resource('/api/customer');
       this.ApplicationResource = $resource('/api/application');
     }
   }
