@@ -3,8 +3,9 @@ namespace app.Services {
     public CustomerResource;
     public ApplicationResource;
 
-    public saveCustomer(email) {
-      return this.CustomerResource.save({email: email}).$promise;
+    public saveCustomer(address) {
+      console.log(address);
+      return this.CustomerResource.save({email: address}).$promise;
     }
 
     public saveApplication(application) {
