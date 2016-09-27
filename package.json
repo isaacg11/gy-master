@@ -15,7 +15,8 @@
     "express": "^4.13.4",
     "mongoose": "^4.6.0",
     "morgan": "^1.7.0",
-    "request": "^2.75.0",
+    "sendgrid": "^4.4.0",
+    "sendgrid-rest": "^2.2.2",
     "serve-favicon": "^2.3.0"
   }
 }

@@ -1,7 +1,13 @@
 import express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-let request = require('request');
+let sg = require('sendgrid')('NytJNtYqSRSBM14iXadnfw');
+let helper = require('sendgrid').mail;
+let from_email = new helper.Email('noreply@yarden.garden');
+let to_email = new helper.Email('isaac.j.grey@gmail.com');
+let subject = 'Hello World from the SendGrid Node.js Library!';
+let content = new helper.Content('text/plain', 'Hello, Email!');
+let mail = new helper.Mail(from_email, subject, to_email, content);
 
 // models
 let Customer = mongoose.model('Customer', {
@@ -26,13 +32,19 @@ router.post('/customer', function(req, res){
     if(err) {
       res.send(err);
     } else {
-      request.post('https://api:pubkey-8bd3e6190d6c41cf927549e1ccc2bd68@api.mailgun.net/v3/getyarden.herokuapp.com/messages', {from: 'noreply@yarden.garden', to: "<isaac.j.grey@gmail.com>", subject: 'Hello!', text: 'heya!'}, function (error, response, body) {
+      let request = sg.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: mail.toJSON(),
+      });
+
+      sg.API(request, function(error, response) {
         if(error) {
-          res.send(error);
+          res.send(err);
         } else {
-          res.send(response)
+          res.send(response);
         }
-      })
+      });
     }
   })
 });
