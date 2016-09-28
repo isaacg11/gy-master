@@ -299,6 +299,12 @@ a {
 	min-height: 40vh;
 }
 
+.page-title-mobile {
+  font-size: 60px;
+  padding-top: 35px;
+  color: #FFFFFF;
+}
+
 .sub-slogan {
   font-size: 80px;
   color: #ffffff;
