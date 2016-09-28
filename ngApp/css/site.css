@@ -511,6 +511,14 @@ a {
   padding-bottom: 50px;
 }
 
+@media only screen and (max-width: 768px) {
+    .requirements {
+      padding-top: 0px;
+      padding-bottom: 50px;
+      border-top: 1px solid #EEEEEE;
+    }
+}
+
 .yardener {
   background-color: #EEEEEE;
   padding-top: 20px;
