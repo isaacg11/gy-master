@@ -514,7 +514,7 @@ a {
 @media only screen and (max-width: 768px) {
     .requirements {
       padding-top: 0px;
-      padding-bottom: 50px;
+      padding-bottom: 0px;
       border-top: 1px solid #EEEEEE;
     }
 }
