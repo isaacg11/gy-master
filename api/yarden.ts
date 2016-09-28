@@ -64,7 +64,7 @@ router.post('/application', function(req, res){
     if(err) {
       res.send(err);
     } else {
-      let from_email = new helper.Email('noreply@yarden.garden');
+      let from_email = new helper.Email('no-reply@yarden.garden');
       let to_email = new helper.Email(req.body.email);
       let subject = "Yarden Application Submitted!";
       let content = new helper.Content('text/plain', "Hi" + " " + req.body.name + "!" + " Your Yarden application has been received, we will notify you once it has been approved. Cheers!");
