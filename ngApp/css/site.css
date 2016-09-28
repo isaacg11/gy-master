@@ -201,6 +201,12 @@ a {
   padding-bottom: 50px;
 }
 
+@media only screen and (max-width: 768px) {
+    .mission-desc {
+      padding-top: 15px;
+    }
+}
+
 .fa-plus {
   padding-left: 25px;
   padding-right: 25px;
