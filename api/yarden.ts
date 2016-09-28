@@ -27,7 +27,7 @@ router.post('/customer', function(req, res){
     if(err) {
       res.send(err);
     } else {
-      let from_email = new helper.Email('noreply@yarden.garden');
+      let from_email = new helper.Email('no-reply@yarden.garden');
       let to_email = new helper.Email(req.body.email);
       let subject = "Registration Confirmed For Yarden (BETA)!";
       let content = new helper.Content('text/plain', "Ahoy! You've been added to the waiting list for Yarden, we will notify you upon it's release. Cheers!");
