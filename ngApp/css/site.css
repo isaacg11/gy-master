@@ -50,6 +50,13 @@ a {
 	min-height: 100vh;
 }
 
+.hamburger {
+  color: #FFFFFF;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 35px;
+}
+
 .company-name {
   font-size: 60px;
   padding-top: 10px;
