@@ -43,6 +43,13 @@ a {
 	min-height: 100vh;
 }
 
+.cover-mobile {
+  background-color: #80c157;
+  background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
 .company-name {
   font-size: 60px;
   padding-top: 10px;
@@ -107,12 +114,6 @@ a {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-/*@media only screen and (max-width: 500px) {
-    #facts {
-        background-color:lightblue;
-    }
-}*/
 
 .what {
   background-color: #eeeeee;
