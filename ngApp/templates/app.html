@@ -1,5 +1,20 @@
-<!-- banner start -->
-    <div class="services-cover">
+  <!-- banner start (mobile)-->
+  <div class="services-cover-mobile visible-xs">
+    <div class="dropdown">
+      <i class="fa fa-bars fa-lg hamburger" aria-hidden="true"></i>
+      <div class="dropdown-content">
+        <p style="border-bottom: 1px solid #CCCCCC; padding-bottom: 10px;" ui-sref="Home()">Home</p>
+        <p ui-sref="Careers({tag: 'info'})">Careers</p>
+      </div>
+    </div>
+    <div class="text-center">
+      <p class="sub-slogan"><b><u>The App</u></b></p>
+    </div>
+  </div>
+  <!-- banner end -->
+
+  <!-- banner start (desktop) -->
+    <div class="services-cover hidden-xs">
       <p class="text-right company-name">Yarden<span class="badge">BETA</span></a><i class="fa fa-caret-down" aria-hidden="true" uib-popover-html="vm.options" popover-placement="bottom"></i>
       </p>
       <div class="text-center">

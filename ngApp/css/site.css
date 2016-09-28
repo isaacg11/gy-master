@@ -292,6 +292,13 @@ a {
 	min-height: 40vh;
 }
 
+.services-cover-mobile {
+  background-color: #80c157;
+  background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 40vh;
+}
+
 .sub-slogan {
   font-size: 80px;
   color: #ffffff;
