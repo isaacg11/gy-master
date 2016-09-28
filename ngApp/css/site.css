@@ -1,5 +1,4 @@
 /* global */
-
 body {
   font-family: 'Josefin Sans', sans-serif;
   margin: 0px;
@@ -27,7 +26,6 @@ a {
 }
 
 /* home */
-
 .divider {
   margin-top: 50px;
 }
@@ -94,8 +92,14 @@ a {
 
 .company-slogan {
   font-size: 60px;
-  color: #ffffff;
+  color: #FFFFFF;
   margin-top: 200px;
+}
+
+.company-slogan-mobile {
+  font-size: 30px;
+  color: #FFFFFF;
+  margin-top: 20px;
 }
 
 @keyframes blink{
