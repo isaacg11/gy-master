@@ -108,12 +108,6 @@ a {
   padding-bottom: 30px;
 }
 
-@media only screen and (max-width: 800px) {
-	.facts{
-	   display: none !important;
-	}
-}
-
 .what {
   background-color: #eeeeee;
   padding-top: 50px;
