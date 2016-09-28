@@ -23,7 +23,7 @@
     </div>
     <!-- banner end -->
 
-    <!-- app start -->
+    <!-- app start (desktop)-->
     <div class="banner">
       <div class="container">
         <div class="row">
@@ -159,8 +159,66 @@
     </div>
     <!-- requirements end -->
 
+    <!-- app start (mobile)-->
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 visible-xs">
+            <div>
+              <form>
+                <h3>Apply Now!</h3>
+                <div class="form-group form-group-lg">
+                  <input
+                    ng-model="vm.application.name"
+                    type="text"
+                    placeholder="Full Name"
+                    class="form-control" />
+                </div>
+                <div class="form-group form-group-lg">
+                  <input
+                    ng-model="vm.application.email"
+                    type="email"
+                    placeholder="Email"
+                    class="form-control" />
+                </div>
+                <div class="form-group form-group-lg">
+                  <input
+                    ng-model="vm.application.phone"
+                    type="text"
+                    placeholder="Phone"
+                    class="form-control" />
+                </div>
+                <div class="form-group form-group-lg">
+                  <input
+                    ng-model="vm.application.address"
+                    type="text"
+                    placeholder="Street Address"
+                    class="form-control" />
+                </div>
+                <div class="form-group form-group-lg">
+                  <input
+                    ng-model="vm.application.cityStateZip"
+                    type="text"
+                    placeholder="City/State/Zip"
+                    class="form-control" />
+                </div>
+                <button
+                  ng-click="vm.submit()"
+                  ng-disabled="!vm.application.name || !vm.application.email || !vm.application.phone || !vm.application.address || !vm.application.cityStateZip"
+                  type="submit"
+                  class="btn btn-lg btn-default"
+                  style="width: 100%;">Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- app end -->
+    
     <!-- get started start -->
-    <div class="get-started text-center">
+    <div class="get-started text-center hidden-xs">
       <div class="container">
         <div class="text-center">
           <h1 style="margin-bottom: 15px;" class="animated infinite bounce">Get Started!</h1>
