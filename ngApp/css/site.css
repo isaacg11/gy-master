@@ -56,6 +56,11 @@ a {
   padding-right: 40px;
 }
 
+.company-name-mobile{
+  font-size: 40px;
+  padding-top: 20px;
+}
+
 .fa-caret-down {
   font-size: 20px;
   margin-left: 5px;
