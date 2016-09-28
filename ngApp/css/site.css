@@ -50,8 +50,8 @@ a {
 
 .hamburger {
   color: #FFFFFF;
-  margin-top: 15px;
-  margin-left: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
   font-size: 35px;
 }
 
@@ -80,7 +80,7 @@ a {
 
 .company-name-mobile{
   font-size: 60px;
-  padding-top: 70px;
+  padding-top: 100px;
   color: #FFFFFF;
 }
 
