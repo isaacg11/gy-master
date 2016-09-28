@@ -188,6 +188,12 @@ a {
   width: 75%;
 }
 
+@media only screen and (max-width: 768px) {
+    .placeholder-img {
+      width: 100%;
+    }
+}
+
 .why {
   background-color: #7f5834;
   color: #FFF;
