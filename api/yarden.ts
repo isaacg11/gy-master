@@ -60,11 +60,29 @@ router.post('/application', function(req, res){
     cityStateZip: req.body.cityStateZip
   });
 
-  newApplication.save((err, customer) => {
+  newApplication.save((err, application) => {
     if(err) {
       res.send(err);
     } else {
-      res.send(customer);
+      let from_email = new helper.Email('noreply@yarden.garden');
+      let to_email = new helper.Email(req.body.email);
+      let subject = "Yarden Application Submitted!";
+      let content = new helper.Content('text/plain', "Hi" + " " + req.body.name + "!" + " Your Yarden application has been received, we will notify you once it has been approved. Cheers!");
+      let mail = new helper.Mail(from_email, subject, to_email, content);
+
+      let request = sg.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: mail.toJSON(),
+      });
+
+      sg.API(request, function(error, response) {
+        if(error) {
+          res.send(error);
+        } else {
+          res.send(response);
+        }
+      });
     }
   })
 });
