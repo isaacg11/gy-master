@@ -276,7 +276,7 @@
           <div class="col-xs-12 col-sm-8">
             <h2 class="text-center"><b>Yarden</b> is still under development and is scheduled to be launched January 2017. Get early access by submitting your email below and we will notify you when it is available!</h2>
             <div class="email-input">
-              <div class="input-group input-group-lg">
+              <div class="input-group input-group-lg hidden-xs">
                 <input
                   ng-model="vm.email"
                   type="email"
@@ -289,6 +289,22 @@
                     class="btn btn-default"
                     type="button">Submit</button>
                 </span>
+              </div>
+              <div class="input-group input-group-lg visible-xs">
+                <div class="form-control">
+                <input
+                  ng-model="vm.email"
+                  type="email"
+                  placeholder="Email Address.." />
+                </div>
+                <div class="form-control">
+                  <button
+                    ng-click="vm.submit()"
+                    ng-disabled="!vm.email"
+                    class="btn btn-default"
+                    type="button">Submit
+                  </button>
+                </div>
               </div>
             </div>
           </div>
