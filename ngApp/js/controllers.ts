@@ -7,15 +7,12 @@ namespace app.Controllers {
   export class HomeController {
     public options;
     public email;
+    public isActive;
 
     public drop() {
-      let menu = <HTMLElement>document.getElementById('menu');
-      menu.style.display = 'block';
-    }
-
-    public hide() {
-      let menu = <HTMLElement>document.getElementById('menu');
-      menu.style.display = 'none';
+      this.isActive = !this.isActive;
+      // let menu = <HTMLElement>document.getElementById('menu');
+      // menu.style.display = 'block';
     }
 
     public submit() {
@@ -36,6 +33,8 @@ namespace app.Controllers {
       public toastr
     ) {
       this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers/info'>Careers</a>");
+
+      this.isActive = false;
 
       if($stateParams["tag"] === 'signup') {
         let el = angular.element(document.getElementById('signup'));
