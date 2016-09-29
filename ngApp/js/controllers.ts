@@ -186,6 +186,18 @@ namespace app.Controllers {
     public step4Txt;
     public step5Img;
     public step5Txt;
+    public isActive;
+
+    public drop() {
+      this.isActive = !this.isActive;
+      if(this.isActive === true) {
+        let menu = <HTMLElement>document.getElementById('menu');
+        menu.style.display = 'block';
+      } else {
+        let menu = <HTMLElement>document.getElementById('menu');
+        menu.style.display = 'none';
+      }
+    }
 
     public submit() {
       this.yardenService.saveApplication(this.application).then(() => {
@@ -309,6 +321,8 @@ namespace app.Controllers {
       public toastr
     ) {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app/v1'>App</a>");
+
+      this.isActive = false;
 
       $window.scrollTo(0, 0);
 
