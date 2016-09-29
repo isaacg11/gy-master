@@ -1,5 +1,6 @@
 // globals
 let counter = 0;
+let menu = <HTMLElement>document.getElementById('menu');
 
 namespace app.Controllers {
 
@@ -9,8 +10,11 @@ namespace app.Controllers {
     public email;
 
     public drop() {
-      let menu = <HTMLElement>document.getElementById('menu');
       menu.style.display = 'block';
+    }
+
+    public hide() {
+      menu.style.display = 'none';
     }
 
     public submit() {
