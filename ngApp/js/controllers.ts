@@ -140,6 +140,18 @@ namespace app.Controllers {
   // app
   export class AppController {
     public options;
+    public isActive;
+
+    public drop() {
+      this.isActive = !this.isActive;
+      if(this.isActive === true) {
+        let menu = <HTMLElement>document.getElementById('menu');
+        menu.style.display = 'block';
+      } else {
+        let menu = <HTMLElement>document.getElementById('menu');
+        menu.style.display = 'none';
+      }
+    }
 
     constructor(
       public $sce: ng.ISCEService,
@@ -148,6 +160,8 @@ namespace app.Controllers {
       public $stateParams: ng.ui.IStateParamsService
     ) {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/careers/info'>Careers</a>");
+
+      this.isActive = false;
 
       if($stateParams["tag"] === 'plans') {
         let el = angular.element(document.getElementById('plans'));
