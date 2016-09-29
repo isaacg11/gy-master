@@ -11,8 +11,13 @@ namespace app.Controllers {
 
     public drop() {
       this.isActive = !this.isActive;
-      // let menu = <HTMLElement>document.getElementById('menu');
-      // menu.style.display = 'block';
+      if(this.isActive === true) {
+        let menu = <HTMLElement>document.getElementById('menu');
+        menu.style.display = 'block';
+      } else {
+        let menu = <HTMLElement>document.getElementById('menu');
+        menu.style.display = 'none';
+      }
     }
 
     public submit() {
