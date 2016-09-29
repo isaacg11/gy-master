@@ -212,7 +212,7 @@ namespace app.Controllers {
 
       this.yardenService.saveApplication(this.application).then(() => {
         this.toastr.success('Success! Your application has been submitted');
-        this.yardenService.ping(this.application.email).then(() => {
+        this.yardenService.ping(this.application).then(() => {
           this.application.name = "";
           this.application.email = "";
           this.application.phone = "";
