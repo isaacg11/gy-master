@@ -87,4 +87,28 @@ router.post('/application', function(req, res){
   })
 });
 
+// POST - ping
+router.post('/ping', function(req, res) {
+  let from_email = new helper.Email('no-reply@yarden.garden');
+  let to_email = new helper.Email('i@yarden.garden');
+  let subject = "PING! Customer Signup!";
+  let content = new helper.Content('text/plain', "Congrats, " + req.body.email + "has been successfully added to the waiting list for Yarden (BETA). Hooray!");
+  let mail = new helper.Mail(from_email, subject, to_email, content);
+
+  let request = sg.emptyRequest({
+    method: 'POST',
+    path: '/v3/mail/send',
+    body: mail.toJSON(),
+  });
+
+  sg.API(request, function(error, response) {
+    if(error) {
+      res.send(error);
+    } else {
+      res.send(response);
+    }
+  });
+});
+
+
 export = router;

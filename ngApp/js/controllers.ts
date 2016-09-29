@@ -22,9 +22,11 @@ namespace app.Controllers {
 
     public submit() {
       let info = {email: this.email};
-      this.yardenService.saveCustomer(info).then((res) => {
+      this.yardenService.saveCustomer(info).then(() => {
         this.toastr.success('Success! You have been added to the list');
-        this.email = "";
+        this.yardenService.ping(info).then(() => {
+          this.email = "";
+        })
       })
     };
 
