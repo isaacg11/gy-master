@@ -4,16 +4,16 @@ namespace app.Services {
     public ApplicationResource;
     public YardenResource;
 
-    public saveCustomer(email) {
-      return this.CustomerResource.save(email).$promise;
+    public saveCustomer(info) {
+      return this.CustomerResource.save(info).$promise;
     }
 
     public saveApplication(application) {
       return this.ApplicationResource.save(application).$promise;
     }
 
-    public ping(email) {
-      return this.YardenResource.save(email).$promise;
+    public ping(info) {
+      return this.YardenResource.save(info).$promise;
     }
 
     constructor(

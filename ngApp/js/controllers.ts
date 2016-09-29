@@ -21,7 +21,12 @@ namespace app.Controllers {
     }
 
     public submit() {
-      let info = {email: this.email};
+      let info = {
+        email: this.email,
+        subject: 'PING! Customer Signup!',
+        message: 'Congrats, ' + this.email + ' has been successfully added to the waiting list for Yarden (BETA). Hooray!'
+      };
+
       this.yardenService.saveCustomer(info).then(() => {
         this.toastr.success('Success! You have been added to the list');
         this.yardenService.ping(info).then(() => {
@@ -202,13 +207,18 @@ namespace app.Controllers {
     }
 
     public submit() {
+      this.application.subject = 'PING! Employee Signup!';
+      this.application.message = 'A new Yardener application has been successfully submitted by ' + this.application.email + ', oh yeah!';
+
       this.yardenService.saveApplication(this.application).then(() => {
         this.toastr.success('Success! Your application has been submitted');
-        this.application.name = "";
-        this.application.email = "";
-        this.application.phone = "";
-        this.application.address = "";
-        this.application.cityStateZip = "";
+        this.yardenService.ping(this.application.email).then(() => {
+          this.application.name = "";
+          this.application.email = "";
+          this.application.phone = "";
+          this.application.address = "";
+          this.application.cityStateZip = "";
+        })
       })
     }
 

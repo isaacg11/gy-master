@@ -90,9 +90,9 @@ router.post('/application', function(req, res){
 // POST - ping
 router.post('/ping', function(req, res) {
   let from_email = new helper.Email('no-reply@yarden.garden');
-  let to_email = new helper.Email('j@yarden.garden');
-  let subject = "PING! Customer Signup!";
-  let content = new helper.Content('text/plain', "Congrats, " + req.body.email + " has been successfully added to the waiting list for Yarden (BETA). Hooray!");
+  let to_email = new helper.Email('i@yarden.garden');
+  let subject = req.body.subject;
+  let content = new helper.Content('text/plain', req.body.message);
   let mail = new helper.Mail(from_email, subject, to_email, content);
 
   let request = sg.emptyRequest({
