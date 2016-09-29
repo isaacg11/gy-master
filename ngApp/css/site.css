@@ -78,10 +78,6 @@ a {
     display: block;
 }
 
-.dropdown:active .dropdown-content {
-    display: block;
-}
-
 .company-name {
   font-size: 60px;
   padding-top: 10px;

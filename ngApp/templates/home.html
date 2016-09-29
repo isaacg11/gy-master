@@ -2,8 +2,8 @@
   <!-- banner start (mobile) -->
   <div class="cover-mobile visible-xs">
     <div class="dropdown">
-      <i class="fa fa-bars fa-lg hamburger" aria-hidden="true"></i>
-      <div class="dropdown-content">
+      <i class="fa fa-bars fa-lg hamburger" aria-hidden="true" ng-click="vm.drop()"></i>
+      <div class="dropdown-content" id="menu">
         <p style="border-bottom: 1px solid #CCCCCC; padding-bottom: 10px;" ui-sref="App({tag:'v1'})">App</p>
         <p ui-sref="Careers({tag: 'info'})">Careers</p>
       </div>
@@ -19,7 +19,6 @@
     </div>
   </div>
   <!-- banner end (mobile) -->
-
 
   <!-- banner start (desktop) -->
     <div class="cover hidden-xs">

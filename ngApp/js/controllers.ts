@@ -8,6 +8,11 @@ namespace app.Controllers {
     public options;
     public email;
 
+    public drop() {
+      let menu = <HTMLElement>document.getElementById('menu');
+      menu.style.display = 'block';
+    }
+
     public submit() {
       let info = {email: this.email};
       this.yardenService.saveCustomer(info).then((res) => {
