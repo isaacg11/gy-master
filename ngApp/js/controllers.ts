@@ -159,6 +159,16 @@ namespace app.Controllers {
     public options;
     public isActive;
 
+    public openNav() {
+      let nav = <HTMLElement>document.getElementById("myNav");
+      nav.style.width = "100%";
+    }
+
+    public closeNav() {
+      let nav = <HTMLElement>document.getElementById("myNav");
+      nav.style.width = "0%";
+    }
+
     public drop() {
       this.isActive = !this.isActive;
       if(this.isActive === true) {
@@ -204,6 +214,16 @@ namespace app.Controllers {
     public step5Img;
     public step5Txt;
     public isActive;
+
+    public openNav() {
+      let nav = <HTMLElement>document.getElementById("myNav");
+      nav.style.width = "100%";
+    }
+
+    public closeNav() {
+      let nav = <HTMLElement>document.getElementById("myNav");
+      nav.style.width = "0%";
+    }
 
     public drop() {
       this.isActive = !this.isActive;
