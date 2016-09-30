@@ -78,6 +78,7 @@ a {
   font-size: 60px;
   padding-top: 30px;
   padding-right: 40px;
+  display: inline;
 }
 
 .company-name-mobile{
@@ -86,8 +87,8 @@ a {
   color: #FFFFFF;
 }
 
-.company-cont {
-  padding-top: 100px;
+.company-logo {
+  display: inline;
 }
 
 .fa-caret-down {
