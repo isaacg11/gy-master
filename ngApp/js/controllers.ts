@@ -11,7 +11,12 @@ namespace app.Controllers {
 
     public openNav() {
       let nav = <HTMLElement>document.getElementById("myNav");
-      nav.style.width = "100%";  
+      nav.style.width = "100%";
+    }
+
+    public closeNav() {
+      let nav = <HTMLElement>document.getElementById("myNav");
+      nav.style.width = "0%";
     }
 
     public drop() {
