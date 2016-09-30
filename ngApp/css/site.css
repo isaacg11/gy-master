@@ -88,12 +88,12 @@ a {
 }
 
 .company-logo {
-  display: inline;
+  /*display: inline;*/
 }
 
 .select-arrow {
   padding-top: 100px;
-  display: inline;
+  /*display: inline;*/
 }
 
 .fa-caret-down {
