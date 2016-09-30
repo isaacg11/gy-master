@@ -87,13 +87,8 @@ a {
   color: #FFFFFF;
 }
 
-.company-logo {
-  /*display: inline;*/
-}
-
 .select-arrow {
-  padding-top: 100px;
-  /*display: inline;*/
+  padding-right: 10px;
 }
 
 .fa-caret-down {
