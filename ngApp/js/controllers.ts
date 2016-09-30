@@ -9,6 +9,11 @@ namespace app.Controllers {
     public email;
     public isActive;
 
+    public openNav() {
+      let nav = <HTMLElement>document.getElementById("mySidenav");
+      nav.style.width = "250px";  
+    }
+
     public drop() {
       this.isActive = !this.isActive;
       if(this.isActive === true) {

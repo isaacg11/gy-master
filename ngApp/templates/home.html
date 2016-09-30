@@ -1,9 +1,16 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
 
   <!-- navbar start -->
   <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #FFFFFF; padding-right: 30px; padding-bottom: 15px;">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <i class="fa fa-list" aria-hidden="true" style="font-size: 40px; padding-left: 10px; padding-top: 10px;"></i>
+      <a class="navbar-brand">
+        <i class="fa fa-list" aria-hidden="true" style="font-size: 40px; padding-left: 10px; padding-top: 10px;" ng-click="vm.openNav()"></i>
       </a>
     </div>
     <img src="images/logo.png" class="navbar-right"/>
