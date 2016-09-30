@@ -381,7 +381,6 @@ namespace app.Controllers {
     }
   }
 
-
   angular.module('app').controller('HomeController', HomeController);
   angular.module('app').controller('AppController', AppController);
   angular.module('app').controller('CareerController', CareerController);
