@@ -10,8 +10,8 @@ namespace app.Controllers {
     public isActive;
 
     public openNav() {
-      let nav = <HTMLElement>document.getElementById("mySidenav");
-      nav.style.width = "250px";  
+      let nav = <HTMLElement>document.getElementById("myNav");
+      nav.style.width = "100%";  
     }
 
     public drop() {
