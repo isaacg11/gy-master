@@ -86,6 +86,10 @@ a {
   color: #FFFFFF;
 }
 
+.company-cont {
+  padding-top: 15px;
+}
+
 .fa-caret-down {
   font-size: 20px;
   margin-left: 5px;
