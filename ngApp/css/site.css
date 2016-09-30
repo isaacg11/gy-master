@@ -91,6 +91,11 @@ a {
   display: inline;
 }
 
+.select-arrow {
+  padding-top: 40px;
+  display: inline;
+}
+
 .fa-caret-down {
   font-size: 20px;
   margin-left: 5px;
