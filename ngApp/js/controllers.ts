@@ -8,10 +8,17 @@ namespace app.Controllers {
     public options;
     public email;
     public isActive;
+    public open;
 
-    public openNav() {
-      let nav = <HTMLElement>document.getElementById("myNav");
-      nav.style.width = "100%";
+    public toggleNav() {
+      this.open = !this.open;
+      if(this.open === true) {
+        let nav = <HTMLElement>document.getElementById("myNav");
+        nav.style.width = "100%";
+      } else {
+        let nav = <HTMLElement>document.getElementById("myNav");
+        nav.style.width = "0%";
+      }
     }
 
     public closeNav() {
@@ -57,6 +64,7 @@ namespace app.Controllers {
       this.options = $sce.trustAsHtml("<a href='/app/v1'>App</a> <br> <a href='/careers/info'>Careers</a>");
 
       this.isActive = false;
+      this.open = false;
 
       if($stateParams["tag"] === 'signup') {
         let el = angular.element(document.getElementById('signup'));

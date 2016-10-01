@@ -18,7 +18,7 @@ app.set('views', './views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-// uncomment after placing your favicon in /public
+// render favicon
 app.use(favicon((__dirname + '/ngApp/images/favicon.png')));
 if (process.env.NODE_ENV !== 'test') app.use(logger('dev'));
 app.use(bodyParser.json());
