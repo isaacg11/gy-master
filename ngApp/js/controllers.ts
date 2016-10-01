@@ -166,10 +166,17 @@ namespace app.Controllers {
   export class AppController {
     public options;
     public isActive;
+    public open;
 
-    public openNav() {
-      let nav = <HTMLElement>document.getElementById("myNav");
-      nav.style.width = "100%";
+    public toggleNav() {
+      this.open = !this.open;
+      if(this.open) {
+        let nav = <HTMLElement>document.getElementById("myNav");
+        nav.style.width = "100%";
+      } else {
+        let nav = <HTMLElement>document.getElementById("myNav");
+        nav.style.width = "0%";
+      }
     }
 
     public closeNav() {
@@ -197,6 +204,7 @@ namespace app.Controllers {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/careers/info'>Careers</a>");
 
       this.isActive = false;
+      this.open = false;
 
       if($stateParams["tag"] === 'plans') {
         let el = angular.element(document.getElementById('plans'));
@@ -222,10 +230,17 @@ namespace app.Controllers {
     public step5Img;
     public step5Txt;
     public isActive;
+    public open;
 
-    public openNav() {
-      let nav = <HTMLElement>document.getElementById("myNav");
-      nav.style.width = "100%";
+    public toggleNav() {
+      this.open = !this.open;
+      if(this.open) {
+        let nav = <HTMLElement>document.getElementById("myNav");
+        nav.style.width = "100%";
+      } else {
+        let nav = <HTMLElement>document.getElementById("myNav");
+        nav.style.width = "0%";
+      }
     }
 
     public closeNav() {
@@ -373,6 +388,7 @@ namespace app.Controllers {
       this.options = $sce.trustAsHtml("<a href='/'>Home</a> <br> <a href='/app/v1'>App</a>");
 
       this.isActive = false;
+      this.open = false;
 
       $window.scrollTo(0, 0);
 
