@@ -12,7 +12,7 @@ namespace app.Controllers {
 
     public toggleNav() {
       this.open = !this.open;
-      if(this.open === true) {
+      if(this.open) {
         let nav = <HTMLElement>document.getElementById("myNav");
         nav.style.width = "100%";
       } else {
