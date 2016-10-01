@@ -313,6 +313,18 @@ a {
      color: #80c157;
  }
 
+ #social-li {
+     color: #80c157;
+ }
+
+ #social-tm {
+     color: #80c157;
+ }
+
+ #social-pi {
+     color: #80c157;
+ }
+
  #social-em {
      color: #80c157;
  }
@@ -326,6 +338,18 @@ a {
  }
 
  #social-gp:hover {
+     color: #d34836;
+ }
+
+ #social-li:hover {
+     color: #1b86bc;
+ }
+
+ #social-tm:hover {
+     color: #36465D;
+ }
+
+ #social-pi:hover {
      color: #d34836;
  }
 
