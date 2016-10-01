@@ -7,7 +7,7 @@ import bodyParser = require('body-parser');
 import mongoose = require('mongoose');
 const app = express();
 
-app.use(favicon(__dirname + '/ngApp/images/favicon.png'));
+app.use(favicon('./ngApp/images/favicon.png'));
 
 // database connection
 let mongo_url = "mongodb://isaac:1234@ds035786.mlab.com:35786/get-yarden";
