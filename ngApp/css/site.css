@@ -197,8 +197,8 @@ a {
   font-size: 16.5px;
   padding: 12px 20px;
   border: 2px solid #ffffff;
-  background: none;
-  color: #FFF;
+  background-color: #FFFFFF;
+  color: #666666;
   cursor: pointer;
   outline: 0;
 }
