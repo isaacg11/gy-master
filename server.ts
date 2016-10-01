@@ -1,11 +1,13 @@
 require('dotenv').config({ silent: true });
 import express = require('express');
-import favicon = require('serve-favicon');
+const favicon = require('express-favicon');
 import logger = require('morgan');
 import cookieParser = require('cookie-parser');
 import bodyParser = require('body-parser');
 import mongoose = require('mongoose');
 const app = express();
+
+app.use(favicon(__dirname + '/ngApp/images/favicon.png'));
 
 // database connection
 let mongo_url = "mongodb://isaac:1234@ds035786.mlab.com:35786/get-yarden";

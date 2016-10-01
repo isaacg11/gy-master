@@ -13,6 +13,7 @@
     "dotenv": "^2.0.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "express-favicon": "^2.0.0",
     "mongoose": "^4.6.0",
     "morgan": "^1.7.0",
     "sendgrid": "^4.4.0",
