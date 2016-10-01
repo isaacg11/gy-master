@@ -1,13 +1,11 @@
 require('dotenv').config({ silent: true });
 import express = require('express');
-const favicon = require('express-favicon');
+import favicon = require('serve-favicon');
 import logger = require('morgan');
 import cookieParser = require('cookie-parser');
 import bodyParser = require('body-parser');
 import mongoose = require('mongoose');
 const app = express();
-
-app.use(favicon('./ngApp/images/favicon.png'));
 
 // database connection
 let mongo_url = "mongodb://isaac:1234@ds035786.mlab.com:35786/get-yarden";
@@ -21,7 +19,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon((__dirname + 'ngApp/images/favicon.png')));
 if (process.env.NODE_ENV !== 'test') app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
