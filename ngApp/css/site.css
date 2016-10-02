@@ -275,7 +275,13 @@ a {
   color: #666666;
 }
 
+.survey {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
 .when {
+  border-top: 1px solid #EEEEEE;
   padding-top: 50px;
   padding-bottom: 30px;
 }
