@@ -26,17 +26,6 @@ namespace app.Controllers {
       nav.style.width = "0%";
     }
 
-    public drop() {
-      this.isActive = !this.isActive;
-      if(this.isActive === true) {
-        let menu = <HTMLElement>document.getElementById('menu');
-        menu.style.display = 'block';
-      } else {
-        let menu = <HTMLElement>document.getElementById('menu');
-        menu.style.display = 'none';
-      }
-    }
-
     public submit() {
       let info = {
         email: this.email,
@@ -184,17 +173,6 @@ namespace app.Controllers {
       nav.style.width = "0%";
     }
 
-    public drop() {
-      this.isActive = !this.isActive;
-      if(this.isActive === true) {
-        let menu = <HTMLElement>document.getElementById('menu');
-        menu.style.display = 'block';
-      } else {
-        let menu = <HTMLElement>document.getElementById('menu');
-        menu.style.display = 'none';
-      }
-    }
-
     constructor(
       public $sce: ng.ISCEService,
       public $window: ng.IWindowService,
@@ -246,17 +224,6 @@ namespace app.Controllers {
     public closeNav() {
       let nav = <HTMLElement>document.getElementById("myNav");
       nav.style.width = "0%";
-    }
-
-    public drop() {
-      this.isActive = !this.isActive;
-      if(this.isActive === true) {
-        let menu = <HTMLElement>document.getElementById('menu');
-        menu.style.display = 'block';
-      } else {
-        let menu = <HTMLElement>document.getElementById('menu');
-        menu.style.display = 'none';
-      }
     }
 
     public submit() {
