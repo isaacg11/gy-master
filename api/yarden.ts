@@ -1,7 +1,7 @@
 import express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-let sg = require('sendgrid')('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');
+let sg = require('sendgrid')('SENDGRID-API-KEY');
 let helper = require('sendgrid').mail;
 
 // models
